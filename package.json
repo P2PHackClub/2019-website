@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "p2phackclub",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "A student run middle-school club at Peak to Peak Charter school where we build amazing things.",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
@@ -13,18 +13,20 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
   },
   "dependencies": {
+    "@hackclub/design-system": "0.0.1-16",
     "gatsby": "^2.16.1",
     "react": "^16.10.2",
-    "react-dom": "^16.10.2"
+    "react-dom": "^16.10.2",
+    "styled-components": "^4.4.0"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    "url": "https://github.com/thatrobotdev/p2phackclub"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/thatrobotdev/p2phackclub/issues"
   }
 }
