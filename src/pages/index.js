@@ -15,17 +15,6 @@ export default () => (
       ]}
     />
 
-<Box align="center" py={5}>
-    <Link href="https://hackclub.com">
-      <Image
-        src="https://i.imgur.com/jiegsaK.jpg"
-        width={200}
-        mx="auto"
-        alt="P2P Hack Club Logo"
-      />
-      </Link>
-</Box>
-
 <Heading m={3} align="center">
 P2P Hack Club
 </Heading>
