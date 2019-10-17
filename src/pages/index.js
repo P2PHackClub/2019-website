@@ -18,7 +18,7 @@ export default () => (
 <Box align="center" py={5}>
     <Link href="https://hackclub.com">
       <Image
-        src="logo.svg"
+        src="https://i.imgur.com/jiegsaK.jpg"
         width={200}
         mx="auto"
         alt="P2P Hack Club Logo"
