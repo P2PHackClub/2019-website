@@ -1,10 +1,20 @@
 import React from "react"
-import { ThemeProvider, Box, Link, Image, Heading, Card, Icon, Text, Flex } from '@hackclub/design-system'
+import Helmet from 'react-helmet'
 import styled from 'styled-components'
+import { ThemeProvider, Box, Link, Image, Heading, Card, Icon, Text, Flex, Button } from '@hackclub/design-system'
+
 
 export default () => (
 
 <ThemeProvider webfonts>
+
+<Helmet
+      title="P2P Hack Club - Main Page"
+      meta={[
+        { name: 'description', content: 'A student run middle-school club at Peak to Peak Charter school where we build amazing things.' },
+        { name: 'keywords', content: 'hack, peak, charter' },
+      ]}
+    />
 
 <Box align="center" py={5}>
     <Link href="https://hackclub.com">
@@ -22,7 +32,7 @@ P2P Hack Club
 </Heading>
 
 <Subtitle m={3} align="center">
-A student run middle-school club at Peak to Peak Charter school where we build amazing things. Future meetings are expected on Thursdays. For more information, you can talk to Reema, Siddharth, Arihant, or JP.
+A student run middle-school club at Peak to Peak Charter school where we build amazing things. Future meetings are expected on Thursdays. For more information, you can talk to Reema, Siddharth, Arihant, or JP
 </Subtitle>
 
 <CardGroup>
@@ -45,6 +55,18 @@ A student run middle-school club at Peak to Peak Charter school where we build a
   </div>
 
 </Card>
+
+
+
+</CardGroup>
+
+
+<CardGroup>
+<a href="/missions/hackclubmeeting-1/">
+<Button>
+Mission Start!
+</Button>
+</a>
 </CardGroup>
 
 </ThemeProvider>
@@ -52,8 +74,7 @@ A student run middle-school club at Peak to Peak Charter school where we build a
 )
 
 const CardGroup = styled(Flex)`
-  display: flex;
-  align-items: center;
+
   text-align: center;
   justify-content: center;
   flex-wrap: wrap;
