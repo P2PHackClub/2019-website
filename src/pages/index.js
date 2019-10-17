@@ -3,7 +3,6 @@ import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import { ThemeProvider, Box, Link, Image, Heading, Card, Icon, Text, Flex, Button } from '@hackclub/design-system'
 
-
 export default () => (
 
 <ThemeProvider webfonts>
@@ -19,7 +18,7 @@ export default () => (
 <Box align="center" py={5}>
     <Link href="https://hackclub.com">
       <Image
-        src="/logo.svg"
+        src="logo.svg"
         width={200}
         mx="auto"
         alt="P2P Hack Club Logo"
