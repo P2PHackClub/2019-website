@@ -8,12 +8,21 @@ author: "JP Kerrane, modified from an article by Max Wofford"
 # Welcome to P2P Hack Club!
 
 Welcome to P2P Hack Club! I hope you are enjoying the club so far! This website is where we are going to be doing many of our "missions", designed to teach you new hacking skills! 😉
+
+Our club is part of a nonprofit network called ["Hack Club"](https://hackclub.com/) of hundreds of other hack clubs across the world, teaming together to make the coolest clubs possible! They will be helping us with the organization of the club, as well as making the club more fun! They've provided us with stickers today, so please check them out! In the future, we might plan events with other clubs around the world!
+
+Throughout the club, we will use your school email to contact you for reminders, as well as occasional recaps of what we did each meeting. If you do not want these emails, or you want these emails at another email address, please let JP know. We will also email your parents with reminders about club dates and other recaps, but these emails will be less often.
+
+If you want to connect with us outside of hack club, check out our Instagram! We are on Instagram at the account @p2phackclub. On Instagram we might post pictures of meetings, spotlights of projects that you create, and more! This should represent our whole club, so if you have any ideas for posts, please share them! (Any pictures of club-members will be posted only if we have your permission.)
+
+Now that we're here, What does the word "Hack" mean anyway? To us, we use the word "Hack" similar to how you would use it in the term "Life-Hacking". In this club, when we're hacking, we're not breaking into banks or cracking the passwords of computer systems. We're going to be using our skills to build and create with technology, whether its an app, website, video game, hardware project, or more. We're going to do awesome stuff this schoolyear!
+
 During a normal club meeting, we might be doing one of two things:
 
-## "Missions" meetings
+## "Missions" meetings (2/5 of meetings that we do)
 Missions meetings (like what we're doing today), are going to be directed, aimed to teach you new skills like creating websites, apps, video games, and more! This type of meeting might be once or twice a month, always with skills that you want to learn (more on that later). At the end of these meetings, if you have a completed project, you will give a demonstration of what you've built to the rest of P2P Hack Club for us to see how awesome it is 😝! Hopefully we will have enough time for everyone to demo a project that they are working on every meeting.
 
-## Open-ended meetings
+## Open-ended meetings (the majority of meetings)
 These meetings usually follow "Missions" meetings, where you will either finish up the project you have done the previous meeting, or start a new project with the skills you have learned. If you are coming into P2P Hack Club with knowledge about how to create a unique project, we will try to help you make it as cool as possible! In this type of meeting, you will also demo what you are working on near the end of the time we meet.
 
 ---
@@ -33,7 +42,7 @@ If you have any questions, please let any of us know! We will be walking around 
 # Mission: Personal Website
 ## Making your first website from scratch.
 
-Are you ready, in the next hour, to walk out with your own personal website?!
+Are you ready, in the next hour, to walk out with your own personal website?! (If you make the coolest website, there might be **prizes**! More info on that next meeting.)
 
 **[It will look something like this.](https://707defenderofjustice--reemations.repl.co/)** (made by Reema!)
 
@@ -81,6 +90,10 @@ HTML works by storing information inside tags. `<html></html>` is an example of 
 
 `<!DOCTYPE html>` tells the browser what version of HTML to expect. Since it is a language, HTML is constantly growing and updating, so there are multiple versions. In our case, we are going to use HTML5, the latest version.
 
+`<title></title>` holds information about the title of the site. The title of a webpage is shown in each tab. Try changing it to make your website unique!
+
+`<meta charset="UTF-8">` tells your browser how to display text on your site. Without it, some text might look look wrong on your site.
+
 ### 2) Previewing the Page
 
 Let's check out what our HTML file looks like in Live Preview! To do this, hover over the **Preview** panel above the editor, and click **"Side-by-side"** (or press CTRL + E).
@@ -107,8 +120,8 @@ Go ahead and add your name in a heading tag, and your description in a paragraph
 </head>
 
 <body>
-  <h1>Mr. Robot</h1>
-  <p>"Yeet"</p>
+  <h1>Spongebob</h1>
+  <p>"I live in a pineapple under the sea."</p>
 </body>
 
 </html>
@@ -128,9 +141,9 @@ If your description was a few paragraphs, or had line breaks, you may have notic
 </head>
 
 <body>
-  <h1>Mr. Robot</h1>
-  <p>"Yeet"</p>
-  <p>I am the coolest robot on the block!</p>
+  <h1>Spongebob</h1>
+  <p>"I live in a pineapple under the sea."</p>
+  <p>Friends with Patrick Star.</p>
 </body>
 ```
 
@@ -138,12 +151,12 @@ To update your page, click the **"Side-by-side"** button again. Booyah! Now you 
 
 ### 4) Adding Images to the Body
 
-First, find an image you would like to include in your page. You can find something on Google Images, Facebook, or Imgur. We'll need the source URL of the image, so right click and select "Copy Image Address".
+First, find an image you would like to include in your page. You can usually find good images in Google Image search, or similar sevices. We'll need the source URL of the image, so right click and select "Copy Image Address".
 
-Images are included in HTML via the image tag, or `<img>`. The image tag has an attribute called `src`, which will hold the _source_ URL of the image you want to display. As an example, if I were to add a picture of a robot, I would right click it and get the source URL, which in this case is http://www.theoldrobots.com/images58/TurboFighter-22.JPG, and put it in an image tag like so:
+Images are included in HTML via the image tag, or `<img>`. The image tag has an attribute called `src`, which will hold the _source_ URL of the image you want to display. As an example, if I were to add a picture of Spongebob, I would right click it and get the source URL, which in this case is https://static01.nyt.com/images/2018/05/03/us/03spongebob_xp/03spongebob_xp-articleLarge.jpg?quality=75&auto=webp&disable=upscale, and put it in an image tag like so:
 
 ```html
-<img src="http://www.theoldrobots.com/images58/TurboFighter-22.JPG">
+<img src="https://static01.nyt.com/images/2018/05/03/us/03spongebob_xp/03spongebob_xp-articleLarge.jpg?quality=75&auto=webp&disable=upscale">
 ```
 
 You may have noticed that the image tag doesn't have a closing tag like `<h1></h1>` or `<body></body>`. That's because it is a [void element](https://www.w3.org/TR/html-markup/syntax.html#syntax-elements), meaning that it doesn't have any contents.
@@ -162,10 +175,10 @@ Go ahead and add this into your `index.html` now. I put my picture before my hea
 </head>
 
 <body>
-  <img src="http://www.theoldrobots.com/images58/TurboFighter-22.JPG">
-  <h1>Mr. Robot</h1>
-  <p>"Yeet"</p>
-  <p>I am the coolest robot on the block!</p>
+  <img src="https://static01.nyt.com/images/2018/05/03/us/03spongebob_xp/03spongebob_xp-articleLarge.jpg?quality=75&auto=webp&disable=upscale">
+  <h1>Spongebob</h1>
+  <p>"I live in a pineapple under the sea."</p>
+  <p>Friends with Patrick Star.</p>
 </body>
 ```
 
@@ -208,6 +221,7 @@ body {
   text-align: center;
 }
 ```
+between the two `<style></style>` tags. 
 
 As with resizing the image, this rule specifies that every `body` tag should have a `text-align` attribute of `center`. This centers everything on our page because all of the content in our HTML file is written inside the body tag.
 
@@ -240,6 +254,7 @@ In this section, your challenge is to add additional features to your website to
 Want to use a different font? Google it!
 Want to add more pictures? Google it!
 Want to add more text? Your entire life story? Background image? Background music? Video? More pages? Google it!
+(if you're stuck, you could always ask us too 😉)
 
 A good way to get ideas for what to add to your website is to look at other people's websites. Find a website that you like, either from the below list or from somewhere else on the internet, pick one aspect of that website that you would like on your own website, and Google for ways to make it happen!
 
@@ -254,8 +269,11 @@ These are some additional resources that you can use to make your site even bett
 ## Part V: You've made it!
 
 So you've created a beautiful website. Great job! At the end of the club, we're going to showcase some of your websites that you've made if we have time!
-Hopefully you're enjoying the club so far! In the future, we're going to upgrade this website to look amazing, and we have a lot of projects in store for the future! If you have any ideas for a "mission" that we might go on, feel free to talk to us in person, or email one of us! We really want to do things in P2P Hack Club that **you** enjoy, because that would make the club a lot more fun!
+
+Hopefully you're enjoying the club so far! We have a lot of projects in store for the future! If you have any ideas for a "mission" that we might go on, feel free to talk to us in person, or email one of us! We really want to do things in P2P Hack Club that **you** enjoy, because that would make the club a lot more fun!
 
 Thanks for coming today, we're so excited to see what you will build!
+
+**P.S.:** You might have noticed that this website looks a little bland. (and that our logo doesn't appear on the main page 😮). This website is definetely going through some renovations! Next week, and every week, we will upgrade this website to be more useful to you. Stay tuned for more updates on that! If you have any ideas on what to add to our club website, let us know! If you want to see how this website is made, [you can see the code here](https://github.com/thatrobotdev/p2phackclub).
 
 [← Back](https://p2p.hackclub.com)
