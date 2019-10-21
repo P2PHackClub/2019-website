@@ -14,17 +14,18 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-plugin-react-svg",
       options: {
-        name: `src`,
-        path: `${__dirname}/src/`,
-      },
+        rule: {
+          include: /assets/
+        }
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `assets`,
-        path: `${__dirname}/content/assets/`,
+        name: `src`,
+        path: `${__dirname}/src/`,
       },
     },
     {

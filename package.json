@@ -1,7 +1,7 @@
 {
   "name": "p2phackclub",
   "private": true,
-  "description": "A student run middle-school club at Peak to Peak Charter school where we build amazing things.",
+  "description": "A club at Peak to Peak Charter school, where we build hardware and software projects!",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
@@ -16,9 +16,11 @@
     "@hackclub/design-system": "0.0.1-16",
     "@mdx-js/mdx": "^1.5.1",
     "gatsby": "^2.16.1",
+    "gatsby-image": "^2.2.29",
     "gatsby-plugin-manifest": "^2.2.23",
     "gatsby-plugin-mdx": "^1.0.52",
     "gatsby-plugin-react-helmet": "^3.1.13",
+    "gatsby-plugin-react-svg": "^2.1.2",
     "gatsby-plugin-sharp": "^2.2.32",
     "gatsby-remark-images": "^3.1.28",
     "gatsby-source-filesystem": "^2.1.33",
@@ -27,7 +29,9 @@
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-helmet": "^5.2.1",
-    "styled-components": "^4.4.0"
+    "react-typography": "^0.16.19",
+    "styled-components": "^4.4.0",
+    "typography": "^0.16.19"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
