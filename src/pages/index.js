@@ -16,7 +16,7 @@ export default () => (
     />
 
 <Heading m={3} align="center">
-P2P Hack Club
+P2P Hack Club.
 </Heading>
 
 <Subtitle m={3} align="center">
@@ -38,7 +38,7 @@ A student run middle-school club at Peak to Peak Charter school where we build a
       Next Meeting
     </Text>
     <Text>
-    October 17th from 3:15-4:00pm in S297.
+    October 23rd from 3:15-4:00pm in S297.
     </Text>
   </div>
 
@@ -52,7 +52,7 @@ A student run middle-school club at Peak to Peak Charter school where we build a
 <CardGroup>
 <a href="/missions/hackclubmeeting-1/">
 <Button>
-Mission Start!
+Let's get spooky!
 </Button>
 </a>
 </CardGroup>
