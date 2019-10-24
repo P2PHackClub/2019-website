@@ -97,7 +97,9 @@ A good way to get ideas for what to add to your website is to look at other peop
 
 ## Part V: Spooky Contest Time
 
-**[That's right! You are ready to submit your website to P2P Hack Club's spooky website contest! Click here to submit your website. The winners get fabulous prizes! 😉](https://docs.google.com/document/d/1R0S5fqrL8e_dMbramMEKRs6elU3VSHqHOLNP3rlm9fw/edit?usp=sharing)**
+**[That's right! You are ready to submit your website to P2P Hack Club's spooky website contest! Click here to submit your website. The winners get fabulous prizes! 😉](https://docs.google.com/forms/d/e/1FAIpQLSe74RLFEuTVk2aazcdloRHz0Yf_tjk08scPadIxDyFnfGGyhA/viewform?usp=sf_link)**
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe74RLFEuTVk2aazcdloRHz0Yf_tjk08scPadIxDyFnfGGyhA/viewform?embedded=true" width="640" height="1375" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
 #### *And now, a note from JP:*
 
