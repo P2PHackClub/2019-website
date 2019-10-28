@@ -1,7 +1,6 @@
 ---
 title: "P2P Hack Club Meeting 2: Spooky Website Competition!"
 description: "Let's get spooky!"
-date: "2019-10-16"
 author: "P2P Hack Club Team, modified from an article by Max Wofford"
 slug: "build-your-first-website"
 ---
