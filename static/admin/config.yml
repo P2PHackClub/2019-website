@@ -5,6 +5,7 @@ backend:
 media_folder: static/img
 public_folder: /img
 site_url: https://p2p.hackclub.com
+publish_mode: editorial_workflow
 # logo_url: https://your-site.com/images/logo.svg (https://www.netlifycms.org/docs/configuration-options/#custom-logo)
 
 collections:
