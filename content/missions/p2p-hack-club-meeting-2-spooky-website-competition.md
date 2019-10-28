@@ -2,7 +2,7 @@
 title: 'P2P Hack Club Meeting 2: Spooky Website Competition!'
 description: Let's get spooky!
 author: 'P2P Hack Club Team, modified from an article by Max Wofford'
-slug: build-your-first-website
+slug: build-your-first-website-test
 ---
 ## Part I: Setup
 
