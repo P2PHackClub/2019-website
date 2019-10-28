@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Link } from "gatsby"
 import { OutlineButton } from '@hackclub/design-system'
 
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 import OrpheusFlag from '../components/OrpheusFlag'
 import Logo from '../components/Logo'
 import '../typography.css'
