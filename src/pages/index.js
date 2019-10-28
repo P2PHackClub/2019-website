@@ -1,76 +1,59 @@
-import React from "react"
-import Helmet from 'react-helmet'
+import React from 'react'
 import styled from 'styled-components'
-import { ThemeProvider, Box, Link, Image, Heading, Card, Icon, Text, Flex, Button } from '@hackclub/design-system'
+import { Link } from "gatsby"
+import { OutlineButton } from '@hackclub/design-system'
 
-export default () => (
+import Layout from '../components/layout';
+import OrpheusFlag from '../components/OrpheusFlag'
+import Logo from '../components/Logo'
+import '../typography.css'
 
-<ThemeProvider webfonts>
-
-<Helmet
-      title="P2P Hack Club - Main Page"
-      meta={[
-        { name: 'description', content: 'A student run middle-school club at Peak to Peak Charter school where we build amazing things.' },
-        { name: 'keywords', content: 'hack, peak, charter' },
-      ]}
-    />
-
-<Heading m={3} align="center">
-P2P Hack Club.
-</Heading>
-
-<Subtitle m={3} align="center">
-A student run middle-school club at Peak to Peak Charter school where we build amazing things. Future meetings are expected on Thursdays. For more information, you can talk to Reema, Siddharth, Arihant, or JP
-</Subtitle>
-
-<CardGroup>
-<Card
-  boxShadowSize="sm"
-  my={4}
-  p={3}
-  color="black"
-  bg="white"
->
-
-<div style={{ color: '#A87EEA' }}>
-    <Icon glyph="event-code" size={64}/>
-    <Text m={0.5} bold>
-      Next Meeting
-    </Text>
-    <Text>
-    October 23rd from 3:15-4:00pm in S297.
-    </Text>
-  </div>
-
-</Card>
-
-
-
-</CardGroup>
-
-
-<CardGroup>
-<a href="/missions/hackclubmeeting-1/">
-<Button>
-Let's get spooky!
-</Button>
-</a>
-</CardGroup>
-
-</ThemeProvider>
+const IndexPage = ({ data }) => (
+  <Layout>
+  <a href="https://hackclub.com/">
+  <OrpheusFlag />
+  </a>
+    <div align="center">
+      <MainLogo>
+        <Logo />
+      </MainLogo>
+      <Title>P2P Hack Club</Title>
+      <Subtitle>A club at Peak to Peak Charter school,<br /> where we build hardware and software projects!<br /> Thursdays, 3:15-4:00pm</Subtitle>
+      <Link to="/build-your-first-website">
+        <OutlineButton>
+          Mission Start!
+        </OutlineButton>
+      </Link>
+    </div>
+  </Layout>
 
 )
+export default IndexPage
 
-const CardGroup = styled(Flex)`
-
-  text-align: center;
-  justify-content: center;
-  flex-wrap: wrap;
-
+const Title = styled.h1`
+  font-family: 'DPComic', cursive;
+  color: #1E1E1E;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+  line-height: 0px;
+  padding-top: 5px;
 `
 
-const Subtitle = styled(Text)`
-  max-width: 500px
-  text-align: center;
-  margin:0 auto;
+const MainLogo = styled.div`
+  width: 300px;
+  height: 344px;
+  padding-top: 10.5px;
+`
+
+const Subtitle = styled.h2`
+  font-family: 'Inconsolata-Regular', monospace;
+  color: #474747;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+  line-height: 55px;
+  padding-top: 5px;
 `
