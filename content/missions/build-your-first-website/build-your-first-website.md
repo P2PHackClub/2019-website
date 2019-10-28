@@ -3,6 +3,7 @@ title: "P2P Hack Club Meeting 1: Personal Website"
 description: "Making your first website from scratch"
 date: "2019-10-16"
 author: "JP Kerrane, modified from an article by Max Wofford"
+slug: "build-your-first-website"
 ---
 
 # Welcome to P2P Hack Club!
@@ -221,7 +222,7 @@ body {
   text-align: center;
 }
 ```
-between the two `<style></style>` tags. 
+between the two `<style></style>` tags.
 
 As with resizing the image, this rule specifies that every `body` tag should have a `text-align` attribute of `center`. This centers everything on our page because all of the content in our HTML file is written inside the body tag.
 

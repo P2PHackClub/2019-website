@@ -2,3 +2,13 @@
   font-family: "DPComic";
   src: url("fonts/dpcomic.woff");
 }
+
+@font-face {
+  font-family: "Inconsolata-Regular";
+  src: url("fonts/Inconsolata-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Inconsolata-Bold";
+  src: url("fonts/Inconsolata-Bold.ttf");
+}
