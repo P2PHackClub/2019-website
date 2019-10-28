@@ -54,6 +54,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-slug`,
     `gatsby-plugin-netlify-cms`,
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

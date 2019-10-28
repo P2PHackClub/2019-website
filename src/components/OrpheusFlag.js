@@ -76,9 +76,6 @@ const OrpheusFlag = styled(Flag)`
     css`
       transform: scale(0.75);
       height: 44px !important;
-      ${theme.mediaQueries.md} {
-        height: 54px !important;
-      }
       &:hover,
       &:focus {
         animation: ${waveFlagScaled} 0.5s linear infinite alternate;
