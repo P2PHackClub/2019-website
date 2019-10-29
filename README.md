@@ -1,3 +1,4 @@
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=thatrobotdev/p2phackclub)](https://dependabot.com)
 <p align="center">
   <a href="https://www.hackclub.com">
     <img alt="P2P Hack Club Logo" src="static/logo.svg" width="60" />
