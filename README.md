@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9a24d489-6f78-40fa-91cd-4144d2580d0b/deploy-status)](https://app.netlify.com/sites/p2phackclub/deploys)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=thatrobotdev/p2phackclub)](https://dependabot.com)
 <p align="center">
   <a href="https://www.hackclub.com">
