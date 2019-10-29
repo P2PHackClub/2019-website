@@ -18,4 +18,4 @@ First things first, we have to add the HTML document structure: html, head, and 
 <!DOCTYPE html><html><head></head><body></body></html>
 ```
 
-Seems simple right? This is because your game will be rendered entirely on the <canvas> element.
+Seems simple right? This is because your game will be rendered entirely on the <canvas> element. Next, add in the following code:
