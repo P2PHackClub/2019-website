@@ -15,7 +15,7 @@ Again, we're using [Pumatech](https://www.pumatech.org) today! To get started, g
 First things first, we have to add the HTML document structure: html, head, and body. (Need a cheat sheet? Take a look at this [document](https://docs.google.com/document/d/1R0S5fqrL8e_dMbramMEKRs6elU3VSHqHOLNP3rlm9fw/edit)). Here's what your code should look like right now: 
 
 ```
-1.<!DOCTYPE html>2.<html>3.<head>4.5.6.</head>7.<body>8.9.10.</body>11.</html>
+<!DOCTYPE html><html><head></head><body></body></html>
 ```
 
 Seems simple right? This is because your game will be rendered entirely on the <canvas> element.
