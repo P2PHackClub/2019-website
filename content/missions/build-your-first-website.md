@@ -1,17 +1,16 @@
 ---
-title: "P2P Hack Club Meeting 2: Spooky Website Competition!"
-description: "Let's get spooky!"
-author: "P2P Hack Club Team, modified from an article by Max Wofford"
-slug: "build-your-first-website"
+title: 'P2P Hack Club Meeting 2: Spooky Website Competition!'
+description: Let's get spooky!
+author: 'P2P Hack Club Team, modified from an article by Max Wofford'
+slug: build-your-first-website
 ---
-
 ## Part I: Setup
 
 ### Getting ready to build it on Pumatech, P2P's webserver!
 
 [Pumatech](https://www.pumatech.org) is Peak to Peak's tech server, which allows you to build websites online! It's similar to Google Docs, but has some important features that make it much better for typing code than a regular text editor.
 
-To get started, go to [https://www.pumatech.org](https://www.pumatech.org). Await more specific instructions on how to access the Code Editor from club officers.
+To get started, go to <https://www.pumatech.org>. Await more specific instructions on how to access the Code Editor from club officers.
 
 ## Part II: Let's Get Coding!
 
@@ -58,6 +57,7 @@ body {
   text-align: center;
 }
 ```
+
 between the two `<style></style>` tags.
 
 As with resizing the image, this rule specifies that every `body` tag should have a `text-align` attribute of `center`. This centers everything on our page because all of the content in our HTML file is written inside the body tag.
@@ -101,7 +101,7 @@ A good way to get ideas for what to add to your website is to look at other peop
 
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe74RLFEuTVk2aazcdloRHz0Yf_tjk08scPadIxDyFnfGGyhA/viewform?embedded=true" width="640" height="1375" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
-#### *And now, a note from JP:*
+#### _And now, a note from JP:_
 
 Hello! I hope you're enjoying P2P Hack Club so far! As you might've noticed, your websites are probably looking better than this club page! In the next few weeks, the P2P Hack Club Officers will be upgrading, and renovating this website for version 2.0! We are re-building this website from the ground up to be more useful to you! Let us know if you have any ideas about what would be useful on this website for you. Thanks for coming today!
 
