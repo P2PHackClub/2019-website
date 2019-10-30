@@ -22,10 +22,9 @@ Seems simple right? This is because your game will be rendered entirely on the `
 
 ```
 <!DOCTYPE html><html>
-<head>    <meta charset="utf-8" />
-    <title> </title>
- // Your title goes between the <title> elements  <style>	* { padding: 0; margin: 0; }
-	canvas { background: #eee; display: block; margin: 0 auto; }  </style></head>
+<head>    <meta charset="utf-8" /> <title>     </title>
+ // Your title goes between the <title> elements  <style>	       * { padding: 0; margin: 0; }
+	canvas { background: #eee; display: block; margin: 0 auto; }   </style></head>
 
 <body>
 <canvas id="myCanvas" width="480" height="320"></canvas>
@@ -53,7 +52,7 @@ The first line of code is storing a reference to the `<canvas>` element, while t
 Next, we'll be defining a starting point at the bottom center of our canvas by using variables called `x` and `y`, then use those to define the position the circle is drawn at. Add the following under the code you just wrote above:
 
 ```
-var x = canvas.width/2;
+var ballRadius = 10;var x = canvas.width/2;
 var y = canvas.height-30;
 ```
 
@@ -65,7 +64,7 @@ var dx = 2;var dy = -2;
 
 ### 2) Adding our ball
 
-As you can see from the header above, we're now going to be adding our ball! The following code below draws out our ball:
+As you can see from the header above, we're now going to be adding our ball! The following code below draws out and moves our ball:
 
 ```
 function drawBall() {
@@ -85,14 +84,14 @@ x += dx;
 y += dy;}setInterval(draw, 10);
 ```
 
+## Part III: Adding a Paddle
+
+So, now we need a paddle to hit the ball. Let's define a few variables for that. Add the following variables near the top of your code, under `var dy = -2;` :
+
+```
+var paddleHeight = 10;var paddleWidth = 75;var paddleX = (canvas.width-paddleWidth)/2;var rightPressed = false;var leftPressed = false;
+```
 
 
 
-
-
-
-
-
-\    
-
-\    }
+https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
