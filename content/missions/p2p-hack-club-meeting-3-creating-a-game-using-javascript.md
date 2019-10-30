@@ -8,7 +8,7 @@ slug: words words words xD
 
 Again, we're using [Pumatech](https://www.pumatech.org) today! To get started, go to <https://www.pumatech.org>. When you're there create a new HTML document and save it as "index.html". Today's game we'll be creating is a Break Breaker ball game!
 
-## Part II: Creating the Canvas 
+## Part II: Creating the Canvas
 
 ### Creating the Canvas Base
 
@@ -21,19 +21,31 @@ First things first, we have to add the HTML document structure: html, head, and 
 Seems simple right? This is because your game will be rendered entirely on the `<canvas>` element. Next, add in the following code:
 
 ```
-<!DOCTYPE html><html><head>    <meta charset="utf-8" />    <title></title> // Your title goes between the <title> elements  <style>	* { padding: 0; margin: 0; }	canvas { background: #eee; display: block; margin: 0 auto; }  </style></head><body><canvas id="myCanvas" width="480" height="320"></canvas><script>	// JavaScript code goes here</script></body></html>
+<!DOCTYPE html><html>
+<head>    <meta charset="utf-8" />
+    <title> </title>
+ // Your title goes between the <title> elements  <style>	* { padding: 0; margin: 0; }
+	canvas { background: #eee; display: block; margin: 0 auto; }  </style></head>
+
+<body>
+<canvas id="myCanvas" width="480" height="320"></canvas>
+<script>	// JavaScript code goes here
+</script>
+</body>
+</html>
 ```
 
 In our code we have a `charset` defined, `<title>` and some CSS in the `<head>`. The charset attribute specifies the character encoding for the HTML document. The body contains `<canvas>` and `<script>` elements — we'll create the game inside the canva and write the JavaScript code that controls it in the script. The `<canvas>` element has an id of myCanvas, which allows us to easily get a reference to it, and it is 480 pixels wide and 320 pixels high. All the JavaScript code we will write today will go between the opening `<script>` and closing `</script>` tags.
 
-## Part II: Adding the Ball 
+## Part II: Adding the Ball
 
 ### 1) Setting up
 
  In order to create graphics on the `<canvas>`, we first have to grab a reference to it in JavaScript. Add the following under your opening `<script>` tag:
 
 ```
-var canvas = document.getElementById("myCanvas");var ctx = canvas.getContext("2d");
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
 ```
 
 The first line of code is storing a reference to the `<canvas>` element, while the second line of code is using a `ctx` variable to store the 2D context (The tool we can use to paint on the canvas)
@@ -41,21 +53,46 @@ The first line of code is storing a reference to the `<canvas>` element, while t
 Next, we'll be defining a starting point at the bottom center of our canvas by using variables called `x` and `y`, then use those to define the position the circle is drawn at. Add the following under the code you just wrote above:
 
 ```
-var x = canvas.width/2;var y = canvas.height-30;
+var x = canvas.width/2;
+var y = canvas.height-30;
 ```
 
+Next, we want to add a small value to x and y after every frame has been drawn to make it appear that the ball is moving. Let's call these small values as dx and dy and set their values to 2 and -2. Add them below your x and y variable definitions:
 
+```
+var dx = 2;var dy = -2; 
+```
 
 ### 2) Adding our ball
 
 As you can see from the header above, we're now going to be adding our ball! The following code below draws out our ball:
 
 ```
-function drawBall() {ctx.beginPath();ctx.arc(x, y, 10, 0, Math.PI*2);ctx.fillStyle = "#0095DD";ctx.fill();ctx.closePath();}
+function drawBall() {
+ctx.beginPath();
+ctx.arc(x, y, 10, 0, Math.PI*2);
+ctx.fillStyle = "#0095DD";
+ctx.fill();
+ctx.closePath();
+}
+```
+
+```
+function draw() {
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+drawBall();    if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {        dx = -dx;    }    if(y + dy > canvas.height-ballRadius || y + dy < ballRadius) {        dy = -dy;    }
+x += dx;
+y += dy;}setInterval(draw, 10);
 ```
 
 
 
-```
-function draw() {ctx.clearRect(0, 0, canvas.width, canvas.height);drawBall();x += dx;y += dy;}
-```
+
+
+
+
+
+
+\    
+
+\    }
