@@ -63,10 +63,7 @@ Each of these lines of code that start with `<` and end with `>` are called tags
 
 ![An arrow pointing to a browser tab.](/img/captura.png "Look! It's your website!")
 
-```
 * `<style>` and `</style>` are tags that tell the browser how the webpage should look. Between these two tags, you can specify the color of your website, animations on your website, and more! (You can learn more about this tag a little later in this document).
-```
-
 * `<body>` and `</body>` are two very important tags. Between those tags holds the content of your website! Stuff like text and images go here.
 
 ### Put text on your website.
