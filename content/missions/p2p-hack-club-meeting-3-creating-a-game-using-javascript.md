@@ -100,11 +100,27 @@ var leftPressed = false;
 The default value for the last two lines is false because at the beginning the control buttons are not pressed. To listen for key presses, we will set up two event listeners. Add the following lines just a few lines under the code above in your JavaScript:
 
 ```
-document.addEventListener("keydown", keyDownHandler, false);document.addEventListener("keyup", keyUpHandler, false);
+document.addEventListener("keydown", keyDownHandler, false);
+document.addEventListener("keyup", keyUpHandler, false);
 ```
 
 Now we need functions for when the keys are pressed. Add the following right under the code above:
 
 ```
-function keyDownHandler(e) {    if(e.key == "Right" || e.key == "ArrowRight") {        rightPressed = true;  }    else if(e.key == "Left" || e.key == "ArrowLeft") {        leftPressed = true;  }}function keyUpHandler(e) {    if(e.key == "Right" || e.key == "ArrowRight") {        rightPressed = false;  }    else if(e.key == "Left" || e.key == "ArrowLeft") {        leftPressed = false;  }}
+function keyDownHandler(e) {
+    if(e.key == "Right" || e.key == "ArrowRight") {
+        rightPressed = true;
+  }
+    else if(e.key == "Left" || e.key == "ArrowLeft") {
+        leftPressed = true;
+  }
+}
+function keyUpHandler(e) {
+    if(e.key == "Right" || e.key == "ArrowRight") {
+        rightPressed = false;
+  }
+    else if(e.key == "Left" || e.key == "ArrowLeft") {
+        leftPressed = false;
+  }
+}
 ```
