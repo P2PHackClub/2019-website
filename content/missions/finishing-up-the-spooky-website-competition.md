@@ -52,7 +52,7 @@ When you're first starting out your website, you might want some code to jump of
 </html>
 ```
 
-#### What each tag means
+#### What each tag in the template means
 
 Each of these lines of code that start with `<` and end with `>` are called tags. Each tag is responsible for a different job.
 
