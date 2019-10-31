@@ -2,7 +2,7 @@
 title: 'P2P Hack Club Meeting 3: Creating a game using JavaScript!'
 description: Learn how to create a simple game using JavaScript!
 author: 'P2P hack club team, modified from an article by MDN'
-slug: words words words xD
+slug: simple-javascript-game
 ---
 ## Part I: Setup
 
@@ -52,7 +52,8 @@ The first line of code is storing a reference to the `<canvas>` element, while t
 Next, we'll be defining a starting point at the bottom center of our canvas by using variables called `x` and `y`, then use those to define the position the circle is drawn at. Add the following under the code you just wrote above:
 
 ```
-var ballRadius = 10;var x = canvas.width/2;
+var ballRadius = 10;
+var x = canvas.width/2;
 var y = canvas.height-30;
 ```
 
@@ -89,9 +90,21 @@ y += dy;}setInterval(draw, 10);
 So, now we need a paddle to hit the ball. Let's define a few variables for that. Add the following variables near the top of your code, under `var dy = -2;` :
 
 ```
-var paddleHeight = 10;var paddleWidth = 75;var paddleX = (canvas.width-paddleWidth)/2;var rightPressed = false;var leftPressed = false;
+var paddleHeight = 10;
+var paddleWidth = 75;
+var paddleX = (canvas.width-paddleWidth)/2;
+var rightPressed = false;
+var leftPressed = false;
 ```
 
+The default value for the last two lines is false because at the beginning the control buttons are not pressed. To listen for key presses, we will set up two event listeners. Add the following lines just a few lines under the code above in your JavaScript:
 
+```
+document.addEventListener("keydown", keyDownHandler, false);document.addEventListener("keyup", keyUpHandler, false);
+```
 
-https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
+Now we need functions for when the keys are pressed. Add the following right under the code above:
+
+```
+function keyDownHandler(e) {    if(e.key == "Right" || e.key == "ArrowRight") {        rightPressed = true;  }    else if(e.key == "Left" || e.key == "ArrowLeft") {        leftPressed = true;  }}function keyUpHandler(e) {    if(e.key == "Right" || e.key == "ArrowRight") {        rightPressed = false;  }    else if(e.key == "Left" || e.key == "ArrowLeft") {        leftPressed = false;  }}
+```
