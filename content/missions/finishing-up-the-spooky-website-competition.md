@@ -8,6 +8,8 @@ slug: spooky-website-comp
 
 I hope you are having a fabulously spooky day!
 
+![A ghost, spooking along](/img/source.gif "OOoOooOooOOooOooOoooOooOooOooOOO")
+
 Did you notice the new front page for our website? It is still a work in progress, but soon it will be our mission control for the club! 😀
 
 Over the past few meetings, we've been building amazingly _spooky_ websites. Today is the last day that we work on our websites, before we start the next mission: **building videogames!** Until then, let's finish our spooky websites!
@@ -180,8 +182,6 @@ To start, we need to figure out what we want to change. Firstly, we are changing
 On the first line, we did `body {`. This tells the website to look at everything between the `<body>` tags. The `{` tells the computer that between the first `{` and the ending `}`, that it should start styling the webpage. Next, we do `background-color: orange;`. This tells the website to take what we were looking at on the first line, and set it's `background color` to `orange`! You can change `orange` to be a bunch of common colors, or [you can look at this list of colors that will work in your code](https://www.w3schools.com/cssref/css_colors.asp). The `;` at the end of the line tells the computer that we are finished telling the computer our color. Finally, we write `}` to tell the computer that we are finished with what we want it to style.
 
 This code makes our website look amazing!
-
-![A ghost, spooking along](/img/source.gif "OOoOooOooOOooOooOoooOooOooOooOOO")
 
 Here's the full code for our website now:
 
