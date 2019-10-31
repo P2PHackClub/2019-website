@@ -63,6 +63,56 @@ Each of these lines of code that start with `<` and end with `>` are called tags
 
 ![An arrow pointing to a browser tab.](/img/captura.png "Look! It's your website!")
 
-    * `<style>` and `</style>` are tags that tell the browser how the webpage should look. Between these two tags, you can specify the color of your website, animations on your website, and more! (You can learn more about this tag a little later in this document).
+```
+* `<style>` and `</style>` are tags that tell the browser how the webpage should look. Between these two tags, you can specify the color of your website, animations on your website, and more! (You can learn more about this tag a little later in this document).
+```
 
 * `<body>` and `</body>` are two very important tags. Between those tags holds the content of your website! Stuff like text and images go here.
+
+### Put text on your website.
+
+Right now, your website is probably looking pretty blank. This is where the text tags come in! These elements help you add text to your website. All text goes between the starting `<body>` tag and the closing `</body>` tag. Here is a list of all of the text tags that you can use one your website:
+
+```
+<h1>Header 1!</h1>
+<h2>Header 2!</h2>
+<h3>Header 3!</h3>
+<h4>Header 1!</h4>
+<h5>Header 2!</h5>
+<h6>Header 3!</h6>
+<p>I am a paragraph. You can put really long sentences in here, and they will come out in a size that people can read easily! Paragraph tags are really useful if you want to put a lot of text on your website.</p>
+```
+
+And these are what they look like, on your site:
+
+![A screenshot of a website with all of the previous example code.](/img/headings-and-paragraph.png "Look at all of that text!")
+
+In context, here is what the full site code looks like:
+
+```
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Amazing Website!</title>
+    <style>
+    </style>
+</head>
+
+<body>
+
+<h1>Header 1!</h1>
+<h2>Header 2!</h2>
+<h3>Header 3!</h3>
+<h4>Header 1!</h4>
+<h5>Header 2!</h5>
+<h6>Header 3!</h6>
+<p>I am a paragraph. You can put really long sentences in here, and they will come out in a size that people can read easily! Paragraph tags are really useful if you want to put a lot of text on your website.</p>
+
+</body>
+
+</html>
+```
+
+### Put an image
