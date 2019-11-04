@@ -77,12 +77,10 @@ ctx.closePath();
 }
 ```
 
+The code below us shows the code for our paddle. It'll also tell us when it's game over. Put this right under the code above:
+
 ```
-function draw() {
-ctx.clearRect(0, 0, canvas.width, canvas.height);
-drawBall();    if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {        dx = -dx;    }    if(y + dy > canvas.height-ballRadius || y + dy < ballRadius) {        dy = -dy;    }
-x += dx;
-y += dy;}setInterval(draw, 10);
+function draw() { function draw() {ctx.clearRect(0, 0, canvas.width, canvas.height);drawBall();drawPaddle(); if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {   dx = -dx; }  if(y + dy < ballRadius) {   dy = -dy; }else if(y + dy > canvas.height-ballRadius) {if(x > paddleX && x < paddleX + paddleWidth) { dy = -dy; }else {  alert("GAME OVER");  document.location.reload();  clearInterval(interval); // Needed for Chrome to end game  } }   if(rightPressed && paddleX < canvas.width-paddleWidth) {   paddleX += 7;  }  else if(leftPressed && paddleX > 0) {  paddleX -= 7;    }    x += dx;    y += dy;}var interval = setInterval(draw, 10);
 ```
 
 ## Part III: Adding a Paddle
@@ -124,3 +122,13 @@ function keyUpHandler(e) {
   }
 }
 ```
+
+We cant play the game if there isn't a paddle! Add the following under `function drawBall() {:`
+
+```
+function drawPaddle() {   ctx.beginPath();   ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);   ctx.fillStyle = "#0095DD";   ctx.fill();   ctx.closePath();}
+```
+
+## Part IV: Bricks
+
+First off, we need variables for our bricks. Add these below `var leftPressed = false;`:
