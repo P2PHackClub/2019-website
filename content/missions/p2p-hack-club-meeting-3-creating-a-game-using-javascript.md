@@ -80,7 +80,35 @@ ctx.closePath();
 The code below us shows the code for our paddle. It'll also tell us when it's game over. Put this right under the code above:
 
 ```
-function draw() { function draw() {ctx.clearRect(0, 0, canvas.width, canvas.height);drawBall();drawPaddle(); if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {   dx = -dx; }  if(y + dy < ballRadius) {   dy = -dy; }else if(y + dy > canvas.height-ballRadius) {if(x > paddleX && x < paddleX + paddleWidth) { dy = -dy; }else {  alert("GAME OVER");  document.location.reload();  clearInterval(interval); // Needed for Chrome to end game  } }   if(rightPressed && paddleX < canvas.width-paddleWidth) {   paddleX += 7;  }  else if(leftPressed && paddleX > 0) {  paddleX -= 7;    }    x += dx;    y += dy;}var interval = setInterval(draw, 10);
+function draw() {
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+drawBall();
+drawPaddle();
+ if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
+   dx = -dx;
+ }
+  if(y + dy < ballRadius) {
+   dy = -dy; }
+else if(y + dy > canvas.height-ballRadius) {
+if(x > paddleX && x < paddleX + paddleWidth) {
+ dy = -dy;
+ }
+else {
+  alert("GAME OVER");
+  document.location.reload();
+  clearInterval(interval); // Needed for Chrome to end game
+  }
+ }
+   if(rightPressed && paddleX < canvas.width-paddleWidth) {
+   paddleX += 7;
+  }
+  else if(leftPressed && paddleX > 0) {
+  paddleX -= 7;
+    }
+    x += dx;
+    y += dy;
+}
+var interval = setInterval(draw, 10);
 ```
 
 ## Part III: Adding a Paddle
@@ -126,49 +154,75 @@ function keyUpHandler(e) {
 We cant play the game if there isn't a paddle! Add the following under `function drawBall() {:`
 
 ```
-function drawPaddle() {   ctx.beginPath();   ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);   ctx.fillStyle = "#0095DD";   ctx.fill();   ctx.closePath();}
+function drawPaddle() {
+   ctx.beginPath();
+   ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
+   ctx.fillStyle = "#0095DD";
+   ctx.fill();
+   ctx.closePath();
+}
 ```
 
 ## Part IV: Bricks
 
+### 1) Variables
+
 First off, we need variables for our bricks. Add these below `var leftPressed = false;`: 
 
 ```
-var brickRowCount = 3;var brickColumnCount = 5;var brickWidth = 75;var brickHeight = 20;var brickPadding = 10;var brickOffsetTop = 30;var brickOffsetLeft = 30;
+var brickRowCount = 3;
+var brickColumnCount = 5;
+var brickWidth = 75;
+var brickHeight = 20;
+var brickPadding = 10;
+var brickOffsetTop = 30;
+var brickOffsetLeft = 30;
 ```
 
 The code below loops around the rows and columns and create the new bricks. Add this right under the code you just wrote above:
 
 ```
-var bricks = [];for(var c=0; c<brickColumnCount; c++) {bricks[c] = [];for(var r=0; r<brickRowCount; r++) {bricks[c][r] = { x: 0, y: 0 }; }}
+var bricks = [];
+for(var c=0; c<brickColumnCount; c++) {
+bricks[c] = [];
+for(var r=0; r<brickRowCount; r++) {
+bricks[c][r] = { x: 0, y: 0 };
+ }
+}
 ```
 
-function drawBricks() {
+### 2) Drawing our bricks
 
-\    for(var c=0; c<brickColumnCount; c++) {
+We actually need bricks in order to play our game! Add this code below `function drawPaddle()`:
 
-\    for(var r=0; r<brickRowCount; r++) {
+```
+function drawBricks() {    for (var c = 0; c < brickColumnCount; c++) {        for (var r = 0; r < brickRowCount; r++) {            if (bricks[c][r].status == 1) {                var brickX = (c * (brickWidth + brickPadding)) + brickOffsetLeft;                var brickY = (r * (brickHeight + brickPadding)) + brickOffsetTop;                bricks[c][r].x = brickX;                bricks[c][r].y = brickY;                ctx.beginPath();                ctx.rect(brickX, brickY, brickWidth, brickHeight);                ctx.fillStyle = "#0095DD";                ctx.fill();                ctx.closePath();            }        }    }}
+```
 
-\    var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
+### 3) Collision Detection
 
-\    var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
+The code below enables collision detection between our ball and bricks. Add this below function `keyUpHandler (e)`:
 
-\    bricks\[c]\[r].x = brickX;
+```
+function collisionDetection() {    for (var c = 0; c < brickColumnCount; c++) {        for (var r = 0; r < brickRowCount; r++) {            var b = bricks[c][r];            if (b.status == 1) {                if (x > b.x && x < b.x + brickWidth && y > b.y && y < b.y + brickHeight) {                    dy = -dy;                    b.status = 0;                }            }        }    }}
+```
 
-\    bricks\[c]\[r].y = brickY;
+## Part V: Adding our score
 
-\    ctx.beginPath();
+First off, we need our variables. Add this under `var brickOffsetLeft = 30;` :
 
-\    ctx.rect(brickX, brickY, brickWidth, brickHeight);
+```
+var score = 0;
+```
 
-\    ctx.fillStyle = "#0095DD";
+Next, we're going to add code that remembers our score. Add this code right under `function drawBricks()`:
 
-\    ctx.fill();
+```
+function drawScore() {  ctx.font = "16px Arial";  ctx.fillStyle = "#0095DD";  ctx.fillText("Score: "+score, 8, 20);}
+```
 
-\    ctx.closePath();
 
-\    }
 
-\    }
 
-}
+
+###
