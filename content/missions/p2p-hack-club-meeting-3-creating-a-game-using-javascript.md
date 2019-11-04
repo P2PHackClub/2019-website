@@ -1,5 +1,5 @@
 ---
-title: 'P2P Hack Club Meeting 3: Creating a game using JavaScript!'
+title: 'P2P Hack Club Meeting 4: Create a simple game using JavaScript!'
 description: Learn how to create a simple game using JavaScript!
 author: 'P2P hack club team, modified from an article by MDN'
 slug: simple-javascript-game
@@ -137,8 +137,38 @@ First off, we need variables for our bricks. Add these below `var leftPressed = 
 var brickRowCount = 3;var brickColumnCount = 5;var brickWidth = 75;var brickHeight = 20;var brickPadding = 10;var brickOffsetTop = 30;var brickOffsetLeft = 30;
 ```
 
-The code below loops around the rows and columns and create the new bricks. Put this right under the code you just wrote above:
+The code below loops around the rows and columns and create the new bricks. Add this right under the code you just wrote above:
 
 ```
 var bricks = [];for(var c=0; c<brickColumnCount; c++) {bricks[c] = [];for(var r=0; r<brickRowCount; r++) {bricks[c][r] = { x: 0, y: 0 }; }}
 ```
+
+function drawBricks() {
+
+\    for(var c=0; c<brickColumnCount; c++) {
+
+\    for(var r=0; r<brickRowCount; r++) {
+
+\    var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
+
+\    var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
+
+\    bricks\[c]\[r].x = brickX;
+
+\    bricks\[c]\[r].y = brickY;
+
+\    ctx.beginPath();
+
+\    ctx.rect(brickX, brickY, brickWidth, brickHeight);
+
+\    ctx.fillStyle = "#0095DD";
+
+\    ctx.fill();
+
+\    ctx.closePath();
+
+\    }
+
+\    }
+
+}
