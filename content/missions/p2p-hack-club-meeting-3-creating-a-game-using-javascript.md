@@ -137,7 +137,7 @@ First off, we need variables for our bricks. Add these below `var leftPressed = 
 var brickRowCount = 3;var brickColumnCount = 5;var brickWidth = 75;var brickHeight = 20;var brickPadding = 10;var brickOffsetTop = 30;var brickOffsetLeft = 30;
 ```
 
-The code below loops around the rows and columns and create the new bricks
+The code below loops around the rows and columns and create the new bricks. Put this right under the code you just wrote above:
 
 ```
 var bricks = [];for(var c=0; c<brickColumnCount; c++) {bricks[c] = [];for(var r=0; r<brickRowCount; r++) {bricks[c][r] = { x: 0, y: 0 }; }}
