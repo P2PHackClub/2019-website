@@ -81,9 +81,9 @@ The code below us shows the code for our paddle. It'll also tell us when it's ga
 
 ```
 function draw() {
-ctx.clearRect(0, 0, canvas.width, canvas.height);
+ctx.clearRect(0, 0, canvas.width, canvas.height);drawBricks();
 drawBall();
-drawPaddle();
+drawPaddle();drawScore();collisionDetection();
  if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
    dx = -dx;
  }
@@ -204,7 +204,16 @@ function drawBricks() {    for (var c = 0; c < brickColumnCount; c++) {        f
 The code below enables collision detection between our ball and bricks. It also shows a "You win!"  notification if you complete the game. Add this below function `keyUpHandler (e)`:
 
 ```
-function collisionDetection() {      for (var c = 0; c < brickColumnCount; c++) {          for (var r = 0; r < brickRowCount; r++) {              var b = bricks[c][r];              if (b.status == 1) {                  if (x > b.x && x < b.x + brickWidth && y > b.y && y < b.y + brickHeight) {                      dy = -dy;                      b.status = 0;     score++;             if(score == brickRowCount*brickColumnCount) {  alert("YOU WIN, CONGRATULATIONS!");  document.location.reload();  clearInterval(interval);                    }                }            }        }    }}
+function collisionDetection() {      for (var c = 0; c < brickColumnCount; c++) {          for (var r = 0; r < brickRowCount; r++) {              var b = bricks[c][r];              if (b.status == 1) {                  if (x > b.x && x < b.x + brickWidth && y > b.y && y < b.y + brickHeight) {                      dy = -dy;                      b.status = 0;     score++;
+             if(score == brickRowCount*brickColumnCount) {
+  alert("YOU WIN, CONGRATULATIONS!");
+  document.location.reload();
+  clearInterval(interval);                                        }
+                }
+            }
+        }
+    }
+}
 ```
 
 ## Part V: Adding our score
@@ -232,7 +241,12 @@ document.addEventListener("mousemove", mouseMoveHandler, false);
 Next, we need a function to update the paddle position based on the pointer coordinates. Add this under the code you just inputted above:
 
 ```
-function mouseMoveHandler(e) {    var relativeX = e.clientX - canvas.offsetLeft;    if(relativeX > 0 && relativeX < canvas.width) {        paddleX = relativeX - paddleWidth/2;    }}
+function mouseMoveHandler(e) {
+    var relativeX = e.clientX - canvas.offsetLeft;
+    if(relativeX > 0 && relativeX < canvas.width) {
+        paddleX = relativeX - paddleWidth/2;
+    }
+}
 ```
 
 ## Part VII: Lives
