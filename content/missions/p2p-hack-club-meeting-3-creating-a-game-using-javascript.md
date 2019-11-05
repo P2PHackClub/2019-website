@@ -256,3 +256,9 @@ We're almost done! The second to last step is adding lives. Add this variable un
 ```
 var lives = 3;
 ```
+
+Next, we need a function to 
+
+```
+function drawLives() {  ctx.font = "16px Arial";  ctx.fillStyle = "#0095DD";  ctx.fillText("Lives: "+lives, canvas.width-65, 20);}
+```
