@@ -80,35 +80,8 @@ ctx.closePath();
 The code below us shows the code for our paddle. It'll also tell us when it's game over. Put this right under the code above:
 
 ```
-function draw() {
-ctx.clearRect(0, 0, canvas.width, canvas.height);drawBricks();
-drawBall();
-drawPaddle();drawScore();collisionDetection();
- if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
-   dx = -dx;
- }
-  if(y + dy < ballRadius) {
-   dy = -dy; }
-else if(y + dy > canvas.height-ballRadius) {
-if(x > paddleX && x < paddleX + paddleWidth) {
- dy = -dy;
- }
-else {
-  alert("GAME OVER");
-  document.location.reload();
-  clearInterval(interval); // Needed for Chrome to end game
-  }
- }
-   if(rightPressed && paddleX < canvas.width-paddleWidth) {
-   paddleX += 7;
-  }
-  else if(leftPressed && paddleX > 0) {
-  paddleX -= 7;
-    }
-    x += dx;
-    y += dy;
-}
-var interval = setInterval(draw, 10);
+
+function draw() {  ctx.clearRect(0, 0, canvas.width, canvas.height);  drawBricks();  drawBall();  drawPaddle();  drawScore();  drawLives();  collisionDetection();  if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {    dx = -dx;  }  if(y + dy < ballRadius) {    dy = -dy;  }  else if(y + dy > canvas.height-ballRadius) {    if(x > paddleX && x < paddleX + paddleWidth) {      dy = -dy;    }    else {      lives--;      if(!lives) {        alert("GAME OVER");        document.location.reload();      }      else {        x = canvas.width/2;        y = canvas.height-30;        dx = 3;        dy = -3;        paddleX = (canvas.width-paddleWidth)/2;      }    }  }  if(rightPressed && paddleX < canvas.width-paddleWidth) {    paddleX += 7;  }  else if(leftPressed && paddleX > 0) {    paddleX -= 7;  }  x += dx;  y += dy;  requestAnimationFrame(draw);}draw();
 ```
 
 ## Part III: Adding a Paddle
@@ -170,8 +143,8 @@ function drawPaddle() {
 First off, we need variables for our bricks. Add these below `var leftPressed = false;`: 
 
 ```
-var brickRowCount = 3;
-var brickColumnCount = 5;
+var brickRowCount = 5;
+var brickColumnCount = 3;
 var brickWidth = 75;
 var brickHeight = 20;
 var brickPadding = 10;
@@ -186,7 +159,7 @@ var bricks = [];
 for(var c=0; c<brickColumnCount; c++) {
 bricks[c] = [];
 for(var r=0; r<brickRowCount; r++) {
-bricks[c][r] = { x: 0, y: 0, status: 1Dr };
+bricks[c][r] = { x: 0, y: 0, status: 1 };
  }
 }
 ```
@@ -207,8 +180,7 @@ The code below enables collision detection between our ball and bricks. It also 
 function collisionDetection() {      for (var c = 0; c < brickColumnCount; c++) {          for (var r = 0; r < brickRowCount; r++) {              var b = bricks[c][r];              if (b.status == 1) {                  if (x > b.x && x < b.x + brickWidth && y > b.y && y < b.y + brickHeight) {                      dy = -dy;                      b.status = 0;     score++;
              if(score == brickRowCount*brickColumnCount) {
   alert("YOU WIN, CONGRATULATIONS!");
-  document.location.reload();
-  clearInterval(interval);                                        }
+  document.location.reload();                                                           }
                 }
             }
         }
@@ -257,8 +229,18 @@ We're almost done! The second to last step is adding lives. Add this variable un
 var lives = 3;
 ```
 
-Next, we need a function to 
+Lastly, we need a function that can draw the score counter. Add this code right under `function drawScore()` :
 
 ```
-function drawLives() {  ctx.font = "16px Arial";  ctx.fillStyle = "#0095DD";  ctx.fillText("Lives: "+lives, canvas.width-65, 20);}
+function drawLives() {
+  ctx.font = "16px Arial";
+  ctx.fillStyle = "#0095DD";
+  ctx.fillText("Lives: "+lives, canvas.width-65, 20);
+}
 ```
+
+
+
+
+
+Ta da! You did it! (Help me Idk what to put here for the ending xD) words words words I'm so sorry I procratinated :V
