@@ -243,4 +243,4 @@ function drawLives() {
 
 
 
-Ta da! You did it! (Help me Idk what to put here for the ending xD) words words words I'm so sorry I procratinated :V
+Ta da! You did it! (Help me Idk what to put here for the ending xD) words words words I'm so sorry I procratinated :V Woo Hoo it's done
