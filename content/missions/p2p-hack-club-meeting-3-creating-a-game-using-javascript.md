@@ -241,10 +241,19 @@ function drawBricks() {    for (var c = 0; c < brickColumnCount; c++) {    for (
 The code below enables collision detection between our ball and bricks. It also shows a "You win!"  notification if you complete the game. Add this below function `keyUpHandler (e)`:
 
 ```
-function collisionDetection() {          for (var c = 0; c < brickColumnCount; c++) {                  for (var r = 0; r < brickRowCount; r++) {                      var b = bricks[c][r];                      if (b.status == 1) {                              if (x > b.x && x < b.x + brickWidth && y > b.y && y < b.y + brickHeight) {                                           dy = -dy;                                      b.status = 0;                     score++;
-        if(score == brickRowCount*brickColumnCount) {
-        alert("YOU WIN, CONGRATULATIONS!");
-        document.location.reload();                                                                               }
+function collisionDetection() {
+for (var c = 0; c < brickColumnCount; c++) {
+    for (var r = 0; r < brickRowCount; r++) {
+    var b = bricks[c][r];
+        if (b.status == 1) {  
+            if (x > b.x && x < b.x + brickWidth && y > b.y && y < b.y + brickHeight){
+                dy = -dy;
+                b.status = 0;
+                score++;
+                    if(score == brickRowCount*brickColumnCount) {
+                        alert("YOU WIN, CONGRATULATIONS!");
+                        document.location.reload();
+                    }
                 }
             }
         }
