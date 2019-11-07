@@ -6,7 +6,7 @@ slug: simple-javascript-game
 ---
 ## Part I: Setup
 
-Again, we're using [Pumatech](https://www.pumatech.org) today! To get started, go to <https://www.pumatech.org>. When you're there create a new HTML document and save it as "index.html". Today's game we'll be creating is a Break Breaker ball game!
+Again, we're using [Pumatech](https://www.pumatech.org) today! To get started, go to <https://www.pumatech.org>. When you're there create a new HTML document and save it as `brickbreaker.html`. Today's game we'll be creating is a Break Breaker ball game!
 
 ## Part II: Creating the Canvas
 
@@ -22,9 +22,9 @@ Seems simple right? This is because your game will be rendered entirely on the `
 
 ```
 <!DOCTYPE html><html>
-<head>    <meta charset="utf-8" /> <title>     </title>
- // Your title goes between the <title> elements  <style>	       * { padding: 0; margin: 0; }
-	canvas { background: #eee; display: block; margin: 0 auto; }   </style></head>
+<head>    <meta charset="utf-8" /> <title>     </title> // Your amazing game title goes here!
+ <style>	       * { padding: 0; margin: 0; }
+canvas { background: #eee; display: block; margin: 0 auto; }   </style></head>
 
 <body>
 <canvas id="myCanvas" width="480" height="320"></canvas>
@@ -214,7 +214,7 @@ bricks[c][r] = { x: 0, y: 0, status: 1 };
 We actually need bricks in order to play our game! Add this code below `function drawPaddle()`:
 
 ```
-function drawBricks() {    for (var c = 0; c < brickColumnCount; c++) {        for (var r = 0; r < brickRowCount; r++) {            if (bricks[c][r].status == 1) {                var brickX = (c * (brickWidth + brickPadding)) + brickOffsetLeft;                var brickY = (r * (brickHeight + brickPadding)) + brickOffsetTop;                bricks[c][r].x = brickX;                bricks[c][r].y = brickY;                ctx.beginPath();                ctx.rect(brickX, brickY, brickWidth, brickHeight);                ctx.fillStyle = "#0095DD";                ctx.fill();                ctx.closePath();            }        }    }}
+function drawBricks() {    for (var c = 0; c < brickColumnCount; c++) {    for (var r = 0; r < brickRowCount; r++) {                  if (bricks[c][r].status == 1) {      var brickX = (c * (brickWidth + brickPadding)) + brickOffsetLeft;                      var brickY = (r * (brickHeight + brickPadding)) + brickOffsetTop;                                 bricks[c][r].x = brickX;       bricks[c][r].y = brickY;                      ctx.beginPath();                      ctx.rect(brickX, brickY, brickWidth, brickHeight);                      ctx.fillStyle = "#0095DD";                      ctx.fill();                      ctx.closePath();                  }          }    }}
 ```
 
 ### 3) Collision Detection
@@ -222,10 +222,10 @@ function drawBricks() {    for (var c = 0; c < brickColumnCount; c++) {        f
 The code below enables collision detection between our ball and bricks. It also shows a "You win!"  notification if you complete the game. Add this below function `keyUpHandler (e)`:
 
 ```
-function collisionDetection() {      for (var c = 0; c < brickColumnCount; c++) {          for (var r = 0; r < brickRowCount; r++) {              var b = bricks[c][r];              if (b.status == 1) {                  if (x > b.x && x < b.x + brickWidth && y > b.y && y < b.y + brickHeight) {                      dy = -dy;                      b.status = 0;     score++;
-             if(score == brickRowCount*brickColumnCount) {
-  alert("YOU WIN, CONGRATULATIONS!");
-  document.location.reload();                                                           }
+function collisionDetection() {          for (var c = 0; c < brickColumnCount; c++) {                  for (var r = 0; r < brickRowCount; r++) {                      var b = bricks[c][r];                      if (b.status == 1) {                              if (x > b.x && x < b.x + brickWidth && y > b.y && y < b.y + brickHeight) {                                           dy = -dy;                                      b.status = 0;                     score++;
+        if(score == brickRowCount*brickColumnCount) {
+        alert("YOU WIN, CONGRATULATIONS!");
+        document.location.reload();                                                                               }
                 }
             }
         }
