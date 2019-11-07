@@ -338,3 +338,5 @@ function drawLives() {
 ```
 
 Ta da! You did it! Now experiment with your game and make it unique!!! Let us know if you have any ideas that you want to create for next meeting!
+
+**P.S.** If you are having any trouble with this article, feel free to see the original! [https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript](https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)
