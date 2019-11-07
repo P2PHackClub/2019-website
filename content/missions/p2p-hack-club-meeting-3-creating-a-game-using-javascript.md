@@ -233,7 +233,23 @@ bricks[c][r] = { x: 0, y: 0, status: 1 };
 We actually need bricks in order to play our game! Add this code below `function drawPaddle()`:
 
 ```
-function drawBricks() {    for (var c = 0; c < brickColumnCount; c++) {    for (var r = 0; r < brickRowCount; r++) {                  if (bricks[c][r].status == 1) {      var brickX = (c * (brickWidth + brickPadding)) + brickOffsetLeft;                      var brickY = (r * (brickHeight + brickPadding)) + brickOffsetTop;                                 bricks[c][r].x = brickX;       bricks[c][r].y = brickY;                      ctx.beginPath();                      ctx.rect(brickX, brickY, brickWidth, brickHeight);                      ctx.fillStyle = "#0095DD";                      ctx.fill();                      ctx.closePath();                  }          }    }}
+function drawBricks() {
+    for (var c = 0; c < brickColumnCount; c++) {
+        for (var r = 0; r < brickRowCount; r++) {
+            if (bricks[c][r].status == 1) {
+            var brickX = (c * (brickWidth + brickPadding)) + brickOffsetLeft;
+            var brickY = (r * (brickHeight + brickPadding)) + brickOffsetTop;
+            bricks[c][r].x = brickX;
+            bricks[c][r].y = brickY;
+            ctx.beginPath();
+            ctx.rect(brickX, brickY, brickWidth, brickHeight);
+            ctx.fillStyle = "#0095DD";
+            ctx.fill();
+            ctx.closePath();
+            }
+        }
+    }
+}
 ```
 
 ### 3) Collision Detection
