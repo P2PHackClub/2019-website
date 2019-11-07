@@ -23,14 +23,31 @@ First things first, we have to add the HTML document structure: html, head, and 
 Seems simple right? This is because your game will be rendered entirely on the `<canvas>` element. Next, add in the following code:
 
 ```
-<!DOCTYPE html><html>
-<head>    <meta charset="utf-8" /> <title>     </title> // Your amazing game title goes here!
- <style>	       * { padding: 0; margin: 0; }
-canvas { background: #eee; display: block; margin: 0 auto; }   </style></head>
+<!DOCTYPE html>
+<html>
+
+<head>    
+<meta charset="utf-8" /> 
+<title></title> // Your amazing game title goes here!
+<style>	       
+* { 
+padding: 0; 
+margin: 0; 
+}
+
+canvas { 
+background: #eee;
+display: block;
+margin: 0 auto; 
+}
+
+</style>
+</head>
 
 <body>
 <canvas id="myCanvas" width="480" height="320"></canvas>
-<script>	// JavaScript code goes here
+<script>
+// JavaScript code goes here
 </script>
 </body>
 </html>
