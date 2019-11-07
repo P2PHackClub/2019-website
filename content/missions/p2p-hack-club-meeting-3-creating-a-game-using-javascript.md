@@ -8,6 +8,8 @@ slug: simple-javascript-game
 
 Again, we're using [Pumatech](https://www.pumatech.org) today! To get started, go to <https://www.pumatech.org>. When you're there create a new HTML document and save it as `brickbreaker.html`. Today's game we'll be creating is a Break Breaker ball game!
 
+![Image of Brick Breaker Game](/img/mdn-breakout-gameplay.png "This is what you are going to build. SO COOL!")
+
 ## Part II: Creating the Canvas
 
 ### Creating the Canvas Base
