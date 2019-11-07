@@ -6,7 +6,7 @@ slug: simple-javascript-game
 ---
 ## Part I: Setup
 
-Again, we're using [Pumatech](https://www.pumatech.org) today! To get started, go to <https://www.pumatech.org>. When you're there create a new HTML document and save it as "index.html". Today's game we'll be creating is a Break Breaker ball game!
+Again, we're using [Pumatech](https://www.pumatech.org) today! To get started, go to <https://www.pumatech.org>. When you're there create a new HTML document and save it as "brickbreaker.html". Today's game we'll be creating is a Break Breaker ball game!
 
 ## Part II: Creating the Canvas
 
