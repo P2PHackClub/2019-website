@@ -1,5 +1,5 @@
 ---
-title: 'P2P Hack Club Meeting 5: Creating a text-adventure video game in JavaScript'
+title: 'P2P Hack Club Meeting 5: Create a text-adventure video game in JavaScript'
 description: Game time!
 author: P2P Hack Club Team
 slug: text-adventure
