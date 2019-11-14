@@ -160,4 +160,4 @@ Get creative! With the `prompt` method, you can ask the player where they would 
 
 Have fun! If you have any feedback for this workshop, or the club in general, please let us know by filling out this Google Form. Thanks!
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSevvl3M8dj1GoqdcS6uL8PfwwBezNtb2GAQIzXz6yMHhqGazg/viewform?embedded=true" width="640" height="1024" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSevvl3M8dj1GoqdcS6uL8PfwwBezNtb2GAQIzXz6yMHhqGazg/viewform?embedded=true" width="640" height="1024" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
