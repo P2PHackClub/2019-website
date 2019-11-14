@@ -43,7 +43,7 @@ We are going to be programming in JavaScript today, so we are going to be using 
 
 ## Part III: 🖊️ Time to start making your story!
 
-For an example, I'm going to create a choose-your-own adventure about waking up in the morning. First off, we need to display the start of the story to the reader. We can do this using the \`alert("");\` method. This method pops up an alert box with text. We can use this in between our \`<script>\` to start our story. Remember that after every statement in javascript, you need to include a semicolon (`;`).
+For an example, I'm going to create a choose-your-own adventure about waking up in the morning. First off, we need to display the start of the story to the reader. We can do this using the `alert("");` method. This method pops up an alert box with text. We can use this in between our `<script>` to start our story. Remember that after every statement in javascript, you need to include a semicolon (`;`).
 
 ```
 <script>
@@ -53,7 +53,7 @@ alert("BEEP BEEP BEEP. The alarm clock is going off next to your bed.");
 
 ![BEEP BEEP BEEP. The alarm clock is going off next to your bed.](/img/beep-beep-beep.png "BEEP BEEP BEEP. The alarm clock is going off next to your bed.")
 
-Yay! Now we have the start of the story. Because this is a choose-your-adventure, let's start adding choice! Let's use the \`confirm("");\` method to ask the player if they want to get out of bed. Confirm pops up a box that asks your user a yes or no question. In our story, we are going to ask if the user wants to shut off the alarm clock and get out of bed.
+Yay! Now we have the start of the story. Because this is a choose-your-adventure, let's start adding choice! Let's use the `confirm("");` method to ask the player if they want to get out of bed. Confirm pops up a box that asks your user a yes or no question. In our story, we are going to ask if the user wants to shut off the alarm clock and get out of bed.
 
 ```
 <script>
@@ -66,7 +66,7 @@ confirm("You should probably get out of bed now, it is a school day. (Press OK i
 
 Now, the player has choice! However, you might notice that clicking the buttons on the confirm box don't do anything. That is because we need to tell the program what to do when the player chooses whether to get out of bed or not!
 
-When the user clicks a button, the `confirm("");` method is being set to \`true\` if the user clicks **OK**, and \`false\` if the user clicks **Cancel**. By using `true` and `false`, Let's get that into a variable called `userGotOutOfBed`. A variable is like a box which stores information that we can look into later.
+When the user clicks a button, the `confirm("");` method is being set to `true` if the user clicks **OK**, and `false` if the user clicks **Cancel**. By using `true` and `false`, Let's get that into a variable called `userGotOutOfBed`. A variable is like a box which stores information that we can look into later.
 
 ```
 <script>
@@ -79,7 +79,7 @@ var userGotOutOfBed = confirm("You should probably get out of bed now, it is a s
 
 ![camelCase](/img/1200px-camelcase_new.svg.png "camelCase")
 
-Now that userGotOutOfBed is either `true` or `false` depending on what the player chose, we are going to make an `if () {}` statement to make the program do different things based on what the player chose. An \`if\` statement tests for a certain condition, (like if something is `true` or `false`).
+Now that userGotOutOfBed is either `true` or `false` depending on what the player chose, we are going to make an `if () {}` statement to make the program do different things based on what the player chose. An `if` statement tests for a certain condition, (like if something is `true` or `false`).
 
 ```
 <script>
