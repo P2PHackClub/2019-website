@@ -4,7 +4,7 @@ description: Game time!
 author: P2P Hack Club Team
 slug: text-adventure
 ---
-Yay!Welcome to our 5th meeting of P2P Hack Club! Today, we're going to be creating a text-based adventure game using JavaScript, with branching paths.
+Yay! Welcome to our 5th meeting of P2P Hack Club! Today, we're going to be creating a text-based adventure game using JavaScript, with branching paths.
 
 ![Journey Under The Sea By R.A. Montgomery](/img/cyoa002hb.jpg "Journey Under The Sea By R.A. Montgomery")
 
