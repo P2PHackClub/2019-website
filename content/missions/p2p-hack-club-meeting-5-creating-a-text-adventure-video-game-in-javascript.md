@@ -2,7 +2,7 @@
 title: 'P2P Hack Club Meeting 5: Create a text-adventure video game in JavaScript'
 description: Game time!
 author: P2P Hack Club Team
-slug: text-adventure
+slug: old-text-adventure
 ---
 Yay! Welcome to our 5th meeting of P2P Hack Club! Today, we're going to be creating a text-based adventure game using JavaScript, with branching paths.
 
