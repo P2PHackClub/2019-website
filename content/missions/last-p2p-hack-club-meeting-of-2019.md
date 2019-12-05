@@ -17,19 +17,11 @@ We've now been together for 6 meetings!!
 
 [We created our first project of the year, websites! Here are some photos! (Click here for the full album)](https://photos.app.goo.gl/DGuGWQPGpTTfGASG6)
 
-![](/img/img_3304.jpg)
+<https://photos.app.goo.gl/DGuGWQPGpTTfGASG6>
 
-![](/img/img_3306.jpg)
+<https://photos.app.goo.gl/DGuGWQPGpTTfGASG6>
 
-![](/img/img_3307.jpg)
-
-![](/img/img_3308.jpg)
-
-![](/img/img_3304.jpg)
-
-![](/img/img_3311.jpg)
-
-![](/img/img_3313.jpg)
+<https://photos.app.goo.gl/DGuGWQPGpTTfGASG6>
 
 ## Meeting 2&3- 🎃Spooky Website Competition🎃
 
@@ -104,6 +96,8 @@ Our new club website is coming out soon! Here is a sneak peak of its design!
 ![](/img/website-header.png)
 
 We're hard at work to make the website a better experience for you! Let us know if you have any ideas for the new website!
+
+As the website is being worked on, we are in the process of getting a new URL! <https://p2phack.club> is our new website URL! [p2p.hackclub.com](https://p2p.hackclub.com) will still redirect to [p2phack.club](https://p2phack.club) in the future.
 
 #### Hackathon Coming Up!
 
