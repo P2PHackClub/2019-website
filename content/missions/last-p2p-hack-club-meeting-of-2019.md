@@ -89,13 +89,13 @@ You are able to submit multiple sticker designs, and the sticker doesn't have to
 
 Here is the form to submit:
 
-<https://forms.gle/dZQWZqYXZAYbmQ8VA>
+<https://forms.gle/DrK1RzjdqwKA4nZX7>
 
-<https://forms.gle/dZQWZqYXZAYbmQ8VA>
+<https://forms.gle/DrK1RzjdqwKA4nZX7>
 
-<https://forms.gle/dZQWZqYXZAYbmQ8VA>
+<https://forms.gle/DrK1RzjdqwKA4nZX7>
 
-<https://forms.gle/dZQWZqYXZAYbmQ8VA>
+<https://forms.gle/DrK1RzjdqwKA4nZX7>
 
 #### New Club Website Coming Out Soon!
 
