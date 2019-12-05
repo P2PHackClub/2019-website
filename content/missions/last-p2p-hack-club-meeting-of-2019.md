@@ -101,6 +101,10 @@ Here is the form to submit:
 
 Our new club website is coming out soon! Here is a sneak peak of its design!
 
+![](/img/website-header.png)
+
+We're hard at work to make the website a better experience for you! Let us know if you have any ideas for the new website!
+
 #### Hackathon Coming Up!
 
 This weekend, The University of Colorado Boulder (CU) is hosting a hackathon! This is an event like a Hack Club, but it lasts for a much longer time! During a hackathon, you can form a team, and finish a programming project during a time limit for prizes!
