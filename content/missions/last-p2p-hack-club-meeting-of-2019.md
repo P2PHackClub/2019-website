@@ -17,19 +17,11 @@ We've now been together for 6 meetings!!
 
 [We created our first project of the year, websites! Here are some photos! (Click here for the full album)](https://photos.app.goo.gl/DGuGWQPGpTTfGASG6)
 
-![](/img/img_3304.jpg)
+<https://photos.app.goo.gl/DGuGWQPGpTTfGASG6>
 
-![](/img/img_3306.jpg)
+<https://photos.app.goo.gl/DGuGWQPGpTTfGASG6>
 
-![](/img/img_3307.jpg)
-
-![](/img/img_3308.jpg)
-
-![](/img/img_3304.jpg)
-
-![](/img/img_3311.jpg)
-
-![](/img/img_3313.jpg)
+<https://photos.app.goo.gl/DGuGWQPGpTTfGASG6>
 
 ## Meeting 2&3- 🎃Spooky Website Competition🎃
 
@@ -67,7 +59,20 @@ Last time we created some amazing text-adventure games in JavaScript! If you hav
 
 ## Meeting 6- End of Year Party!!!!!!!!
 
-We are here today to celebrate all that you have made!!! You are amazing! If you see a project by another clubmember that you like, make sure to tell them!
+Today, we are going to be having an end of year party! This is a celebration of what you all have made. You are amazing! If you see a project by another clubmember that you like, make sure to tell them!
+
+You can choose to work on any of your prior projects, or start a new one! Here are some ideas:
+
+* Make the best choose your own adventure story the world has seen!
+* Make a website to host a poem that you have made.
+* Make a website that is filled with links to your favorite websites on the web! See if you can make a button that randomly takes you to a new website every time you click it!
+* Make a how-to site for your favorite hobby. Like playing Minecraft? Make a how-to guide on how to kill the Ender Dragon, and share it with your friends! Like crocheting? Make a how-to guide for how to crochet different patterns!
+* Make your own blog! Post your short stories, or write a novel on a website for the world to see!
+* Make a digital "Scrapbook" of pictures, videos, audio files, quotations, and more from a trip that you've gone on!
+* Want to study for a test that is coming up? Make your own quiz site using JavaScript! You can implement flashcards, vocab quizzes, and more!
+* Know any funny jokes? Make a site that hosts your favorites! Who doesn't like a good laugh?
+* Do you like photography? Post snapshots of your recent masterpieces!
+* Do you make comics in your freetime? Make a website to host a webcomic!
 
 ### 2020 News!
 
@@ -104,6 +109,8 @@ Our new club website is coming out soon! Here is a sneak peak of its design!
 ![](/img/website-header.png)
 
 We're hard at work to make the website a better experience for you! Let us know if you have any ideas for the new website!
+
+As the website is being worked on, we are in the process of getting a new URL! <https://p2phack.club> is our new website URL! [p2p.hackclub.com](https://p2p.hackclub.com) will still redirect to [p2phack.club](https://p2phack.club) in the future.
 
 #### Hackathon Coming Up!
 
