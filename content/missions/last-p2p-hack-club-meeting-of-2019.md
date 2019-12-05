@@ -112,3 +112,7 @@ This weekend, The University of Colorado Boulder (CU) is hosting a hackathon! Th
 Local Hack Day is a hackathon happening on **December 7th, 2019**. You should totally come! It is going to be a lot of fun! 
 
 [For more information, you can click here for the hackathon's website.](https://local.hackcu.org/)
+
+# See you next meeting!
+
+## \-P2P Hack Club Team
