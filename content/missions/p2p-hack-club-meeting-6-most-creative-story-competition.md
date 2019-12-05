@@ -216,9 +216,9 @@ Get creative! With the `prompt` method, you can ask the player where they would 
 
 # Important Announcements!
 
-Thanks for coming to the meeting today! We just wanted to remind you that our final meeting this year is December 5th, then we are taking a break until next semester! While you wait, the P2P Hack Club team wil be crafting some cool things behind the scenes, including missions, and a new website 3.0! Very exciting stuff ;).
+Thanks for coming to the meeting today! We just wanted to remind you that this is our final meeting for the semester and we will be back next semester! We would also like to thank everyone for being such an amazing group for the kickoff for Hack Club. We can't wait until next year! While you wait, the P2P Hack Club team will be crafting some cool things behind the scenes, including missions, and a new website 3.0! Very exciting stuff ;).
 
-Even though we won't be having our regular meetings until next year, that doesn't mean you need to stop coding! During Thanksgiving and Winter break, here are some cool websites that you continue programming on! (Remember to ask your parents first before you sign up for an account!)
+Even though we won't be having our regular meetings until next year, that doesn't mean you need to stop coding! During Winter break, here are some cool websites that you continue programming on! (Remember to ask your parents first before you sign up for an account!)
 
 * [Code.org is a website that teaches HTML, CSS, and JS! Check it out here!](https://code.org/student/middle-high)
 * [Shortly after our last meeting this year, from December 9-15th, Hour of Code is happening! Hour of Code is a week-long event where students from all over the world program and create a project in one hour! Activities range from programming Minecraft, drawing with code, creating your own avatars, and more! Check it out here!](https://hourofcode.com/us/learn)
