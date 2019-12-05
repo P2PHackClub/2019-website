@@ -19,9 +19,9 @@ const IndexPage = ({ data }) => (
       </MainLogo>
       <Title>P2P Hack Club</Title>
       <Subtitle>A club at Peak to Peak Charter school,<br /> where we build hardware and software projects!<br /> Thursdays, 3:15-4:00pm</Subtitle>
-      <Link to="/text-adventure">
+      <Link to="/final-meeting">
         <OutlineButton>
-          Game Time!
+          Party!!
         </OutlineButton>
       </Link>
     </div>
