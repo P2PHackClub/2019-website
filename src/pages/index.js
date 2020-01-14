@@ -23,6 +23,10 @@ const IndexPage = ({ data }) => (
         <OutlineButton>
           Party!!
         </OutlineButton>
+        <hr></hr>
+        <footer>
+        P2P Hack Club is fiscally sponsored by Hack Club Bank, a project by the The Hack Foundation (d.b.a Hack Club), a 501(c)(3) nonprofit (EIN: 81-2908499).
+        </footer>
       </Link>
     </div>
   </Layout>
@@ -42,8 +46,7 @@ const Title = styled.h1`
 `
 
 const MainLogo = styled.div`
-  width: 300px;
-  height: 344px;
+  width: 200px;
   padding-top: 10.5px;
 `
 
