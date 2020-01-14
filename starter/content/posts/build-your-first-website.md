@@ -1,8 +1,9 @@
 ---
 title: "P2P Hack Club Meeting 2: Spooky Website Competition!"
-description: "Let's get spooky!"
-author: "P2P Hack Club Team, modified from an article by Max Wofford"
-slug: "build-your-first-website"
+date: "2019-07-25"
+thumbnail: "../thumbnails/js.png"
+tags:
+    - "javascript"
 ---
 
 ## Part I: Setup
