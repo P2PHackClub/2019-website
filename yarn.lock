@@ -6304,10 +6304,10 @@ gatsby-plugin-mdx@^1.0.56:
     unist-util-remove "^1.0.3"
     unist-util-visit "^1.4.1"
 
-gatsby-plugin-netlify-cms@^4.1.33:
-  version "4.1.33"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify-cms/-/gatsby-plugin-netlify-cms-4.1.33.tgz#cb344915af1e6732f096587cae43fc3c0e7f1661"
-  integrity sha512-r08SZfmAyCyFtsw3UJRFfYO35nXtmSnCECTZ0qbzxG15Xl3YeUzQrBRgsxIarVbAuheMRwM0mt9OzdhLMKotTg==
+gatsby-plugin-netlify-cms@^4.1.37:
+  version "4.1.37"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify-cms/-/gatsby-plugin-netlify-cms-4.1.37.tgz#3e3150e514cf0496a2dd14a19b2192e984ff14d4"
+  integrity sha512-aFPl3OHJkbd9ba/dwmKopnr+8mSuL2/sF646VQcKbz0Gvb6aiLy39M63Tn81XM7Xbnm9attH8PJzxEBgsUW1Mg==
   dependencies:
     "@pieh/friendly-errors-webpack-plugin" "1.7.0-chalk-2"
     copy-webpack-plugin "^5.1.0"
