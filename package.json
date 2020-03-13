@@ -27,7 +27,7 @@
     "gatsby-plugin-slug": "^1.0.1",
     "gatsby-plugin-styled-components": "^3.1.20",
     "gatsby-remark-images": "^3.1.49",
-    "gatsby-source-filesystem": "^2.1.52",
+    "gatsby-source-filesystem": "^2.1.54",
     "gatsby-transformer-remark": "^2.6.58",
     "gatsby-transformer-sharp": "^2.3.18",
     "netlify-cms-app": "^2.11.27",
