@@ -7,7 +7,7 @@
 module.exports = {
     siteMetadata: {
         title: `P2P Hack Club`,
-        description: `A club at Peak to Peak Charter school, where we build hardware and software projects! whose Fearless Leader is Naitik Sinha`,
+        description: `A club at Peak to Peak Charter school, where we build hardware and software projects whose Fearless Leader is Naitik Sinha!`,
         url: `https://p2p.hackclub.com`,
         author: `James Kerrane`,
     },
