@@ -9,5 +9,5 @@
   P2P Hack Club
 </h1>
 
-The official website for Peak to Peak Charter School's Hack Club.
+The official website for Peak to Peak Charter School's Hack Club, hosted by Mrs. Van Tol!
 Come back later for more information.
