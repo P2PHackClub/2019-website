@@ -1,0 +1,59 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 3.14.1"/><title data-react-helmet="true"></title><style data-styled="" data-styled-version="5.3.1"></style><link rel="icon" href="/favicon-32x32.png?v=3a318e3ceb32f2e06b497c0795ae14cb" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#7FD0D8"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=3a318e3ceb32f2e06b497c0795ae14cb"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=3a318e3ceb32f2e06b497c0795ae14cb"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=3a318e3ceb32f2e06b497c0795ae14cb"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=3a318e3ceb32f2e06b497c0795ae14cb"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=3a318e3ceb32f2e06b497c0795ae14cb"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=3a318e3ceb32f2e06b497c0795ae14cb"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=3a318e3ceb32f2e06b497c0795ae14cb"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=3a318e3ceb32f2e06b497c0795ae14cb"/><link as="script" rel="preload" href="/webpack-runtime-c37c8c0e5fea5970342d.js"/><link as="script" rel="preload" href="/framework-8f552c914ef4a0dd8955.js"/><link as="script" rel="preload" href="/532a2f07-661d9a9450b481d95118.js"/><link as="script" rel="preload" href="/app-ef116659a2de0b353058.js"/><link as="script" rel="preload" href="/component---src-templates-post-js-39418d1cea313f5b3de3.js"/><link as="fetch" rel="preload" href="/page-data/build-your-first-website/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div style="margin:2em"><h1>P2P Hack Club Meeting 2: Spooky Website Competition!</h1><h4 style="color:rgb(165, 164, 164)">P2P Hack Club Team, modified from an article by Max Wofford</h4><div><h2>Part I: Setup</h2>
+<h3>Getting ready to build it on Pumatech, P2P's webserver!</h3>
+<p><a href="https://www.pumatech.org">Pumatech</a> is Peak to Peak's tech server, which allows you to build websites online! It's similar to Google Docs, but has some important features that make it much better for typing code than a regular text editor.</p>
+<p>To get started, go to <a href="https://www.pumatech.org">https://www.pumatech.org</a>. Await more specific instructions on how to access the Code Editor from club officers.</p>
+<h2>Part II: Let's Get Coding!</h2>
+<h3>1) HTML Resource Document</h3>
+<p><strong><a href="https://docs.google.com/document/d/1R0S5fqrL8e_dMbramMEKRs6elU3VSHqHOLNP3rlm9fw/edit?usp=sharing">The P2P Hack Club leaders have created an HTML resource document that will guide you while you are creating your website!</a>. CLICK HERE!</strong></p>
+<p>Remember, you need to <strong>Run</strong> your program every time you want to see your updated website.</p>
+<p>Though our website has some text on it, we're not done. Our webpage is fully functional, but needs a little help in the look-and-feel department. Fret not. CSS will allow you to manipulate the styling of your page in all your needs.</p>
+<h2>Part III: The CSS File</h2>
+<p>So what is CSS? CSS, also known as Cascading Style Sheets, is a language used for styling the tags (or "elements") on a web page.</p>
+<p>While HTML oversees the content and the way it's structured, CSS is how you'll specify how you'd like your content to look --- with it you can set things like colors, spacing, and more.</p>
+<h3>1) Using CSS</h3>
+<p>To use CSS in our website, we are going to use the <code>&#x3C;style>&#x3C;/style></code> tags that have been included in our template!</p>
+<h3>2) Adding Styles to the Stylesheet</h3>
+<p>Now let's write some CSS to resize the image.</p>
+<p>Try typing the following between the <code>&#x3C;style>&#x3C;/style></code> tags:</p>
+<pre><code class="language-css">img {
+  width: 200px;
+}
+</code></pre>
+<p>A CSS stylesheet contains "rules," each of which consists of a selector, and attributes and values within brackets, known as a "declaration block".</p>
+<p>In our case, the selector is <code>img</code>. This merely selects all image tags (and thus, all images). The rule then says to set the <code>width</code> (width) of all things selected (in our case, all the images) to <code>200px</code>. <code>px</code> refers to pixels, which are a unit of measurement on the screen. When this rule is applied, all the images on our page will have a width of 200 pixels.</p>
+<p>Next, we're going to center-align the entire body section.</p>
+<p>We'll add</p>
+<pre><code class="language-css">body {
+  text-align: center;
+}
+</code></pre>
+<p>between the two <code>&#x3C;style>&#x3C;/style></code> tags.</p>
+<p>As with resizing the image, this rule specifies that every <code>body</code> tag should have a <code>text-align</code> attribute of <code>center</code>. This centers everything on our page because all of the content in our HTML file is written inside the body tag.</p>
+<p>Now let's change the font of our text. We'll add another attribute, <code>font-family</code>, to the <code>body</code> rule, and set the value to <code>"Arial"</code>. Now it will look like this:</p>
+<pre><code class="language-css">body {
+  text-align: center;
+  font-family: "Arial";
+}
+</code></pre>
+<p>You can take this even further by adding a bit of color to the page! The attribute <code>color</code> <strong>(spelled without a u)</strong> allows you to set the text color, and <code>background-color</code> allows you to set a background color. You can find a list of supported color names over at <a href="https://www.w3schools.com/colors/colors_names.asp">W3Schools</a>. Keep in mind that it's a good idea to pick a combination of colors will keep the text readable.</p>
+<pre><code class="language-css">body {
+  text-align: center;
+  font-family: "Arial";
+  background: azure;
+  color: purple;
+}
+</code></pre>
+<p>Now be sure to click <strong>Side-by-side</strong> to get the most recent version of your website. Ah, it is truly beautiful to behold.</p>
+<h2>Part IV: Hacking</h2>
+<p>In this section, your challenge is to add additional features to your website to make it your own!</p>
+<p>Want to use a different font? Google it!
+Want to add more pictures? Google it!
+Want to add more text? Your entire life story? Background image? Background music? Video? More pages? Google it!
+(if you're stuck, you could always ask us too 😉)</p>
+<p>A good way to get ideas for what to add to your website is to look at other people's websites. Find a website that you like, either from the below list or from somewhere else on the internet, pick one aspect of that website that you would like on your own website, and Google for ways to make it happen!</p>
+<h2>Part V: Spooky Contest Time</h2>
+<p><strong><a href="https://docs.google.com/forms/d/e/1FAIpQLSe74RLFEuTVk2aazcdloRHz0Yf_tjk08scPadIxDyFnfGGyhA/viewform?usp=sf_link">That's right! You are ready to submit your website to P2P Hack Club's spooky website contest! Click here to submit your website. The winners get fabulous prizes! 😉</a></strong></p>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe74RLFEuTVk2aazcdloRHz0Yf_tjk08scPadIxDyFnfGGyhA/viewform?embedded=true" width="640" height="1375" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<h4><em>And now, a note from JP:</em></h4>
+<p>Hello! I hope you're enjoying P2P Hack Club so far! As you might've noticed, your websites are probably looking better than this club page! In the next few weeks, the P2P Hack Club Officers will be upgrading, and renovating this website for version 2.0! We are re-building this website from the ground up to be more useful to you! Let us know if you have any ideas about what would be useful on this website for you. Thanks for coming today!</p>
+<p><a href="https://p2p.hackclub.com">← Back</a></p></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/build-your-first-website";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-b74587b69fd7bed5ab12.js"],"app":["/app-ef116659a2de0b353058.js"],"component---src-pages-index-js":["/component---src-pages-index-js-0eb8dd4d4cb2abc15f16.js"],"component---src-templates-post-js":["/component---src-templates-post-js-39418d1cea313f5b3de3.js"]};/*]]>*/</script><script src="/polyfill-b74587b69fd7bed5ab12.js" nomodule=""></script><script src="/component---src-templates-post-js-39418d1cea313f5b3de3.js" async=""></script><script src="/app-ef116659a2de0b353058.js" async=""></script><script src="/532a2f07-661d9a9450b481d95118.js" async=""></script><script src="/framework-8f552c914ef4a0dd8955.js" async=""></script><script src="/webpack-runtime-c37c8c0e5fea5970342d.js" async=""></script></body></html>

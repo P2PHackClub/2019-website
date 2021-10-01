@@ -1,0 +1,110 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 3.14.1"/><title data-react-helmet="true"></title><style data-styled="" data-styled-version="5.3.1"></style><link rel="icon" href="/favicon-32x32.png?v=3a318e3ceb32f2e06b497c0795ae14cb" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#7FD0D8"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=3a318e3ceb32f2e06b497c0795ae14cb"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=3a318e3ceb32f2e06b497c0795ae14cb"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=3a318e3ceb32f2e06b497c0795ae14cb"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=3a318e3ceb32f2e06b497c0795ae14cb"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=3a318e3ceb32f2e06b497c0795ae14cb"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=3a318e3ceb32f2e06b497c0795ae14cb"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=3a318e3ceb32f2e06b497c0795ae14cb"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=3a318e3ceb32f2e06b497c0795ae14cb"/><link as="script" rel="preload" href="/webpack-runtime-c37c8c0e5fea5970342d.js"/><link as="script" rel="preload" href="/framework-8f552c914ef4a0dd8955.js"/><link as="script" rel="preload" href="/532a2f07-661d9a9450b481d95118.js"/><link as="script" rel="preload" href="/app-ef116659a2de0b353058.js"/><link as="script" rel="preload" href="/component---src-templates-post-js-39418d1cea313f5b3de3.js"/><link as="fetch" rel="preload" href="/page-data/old-text-adventure/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div style="margin:2em"><h1>P2P Hack Club Meeting 5: Create a text-adventure video game in JavaScript</h1><h4 style="color:rgb(165, 164, 164)">P2P Hack Club Team</h4><div><p>Yay! Welcome to our 5th meeting of P2P Hack Club! Today, we're going to be creating a text-based adventure game using JavaScript, with branching paths.</p>
+<p><img src="/img/cyoa002hb.jpg" alt="Journey Under The Sea By R.A. Montgomery" title="Journey Under The Sea By R.A. Montgomery"></p>
+<p>A choose-your-own adventure is a type of story where the reader decides what is going to happen next. Each choose-your-own adventure has multiple adventures, and stories can get very complex! If you haven't already, you should read the <a href="https://en.wikipedia.org/wiki/Choose_Your_Own_Adventure">Choose Your Own Adventure</a> series by R.A. Montgomery. We are going to be creating a similar story style today.</p>
+<h2>Part I: Setup</h2>
+<p>We're using <a href="https://www.pumatech.org">Pumatech</a> today! To get started, go to <a href="https://www.pumatech.org">https://www.pumatech.org</a>. When you're there create a new HTML document and save it as <code>chooseyourownadventure.html</code>. Because we've created so many projects already, naming this HTML file with a memorable name will make it easier to find later!</p>
+<h2>Part II: Creating the Boilerplate Code</h2>
+<p>We are going to be programming in JavaScript today, so we are going to be using the <code>&#x3C;script></code> tag. To start, we are going to take the standard HTML5 template, and add a <code>&#x3C;script></code> tag in the body.</p>
+<pre><code>&#x3C;!DOCTYPE html>
+&#x3C;html lang="en">
+
+&#x3C;head>
+    &#x3C;meta charset="UTF-8">
+    &#x3C;title>&#x3C;/title>
+&#x3C;/head>
+
+&#x3C;body>
+
+&#x3C;script>
+
+
+&#x3C;/script>
+
+&#x3C;/body>
+
+&#x3C;/html>
+</code></pre>
+<p><strong>Fun Fact!</strong> Ever wondered what the <code>&#x3C;meta charset="UTF-8"></code> tag does? This tag tells the browser that you are writing text, and it lets you do things like putting emojis 😀 into your website! Without this tag, some text on your site m̶̯̽ḯ̶̠g̸͇̎h̸̜͊t̵̗̽ ̵̞͘l̸̺̑o̵͓͝o̴͉̊k̸̲͒ ̴̥̓w̷͔̑r̵̠͌ö̴͉n̷̰̊g̴̺̊.</p>
+<h2>Part III: 🖊️ Time to start making your story!</h2>
+<p>For an example, I'm going to create a choose-your-own adventure about waking up in the morning. First off, we need to display the start of the story to the reader. We can do this using the <code>alert("");</code> method. This method pops up an alert box with text. We can use this in between our <code>&#x3C;script></code> to start our story. Remember that after every statement in javascript, you need to include a semicolon (<code>;</code>).</p>
+<pre><code>&#x3C;script>
+alert("BEEP BEEP BEEP. The alarm clock is going off next to your bed.");
+&#x3C;/script>
+</code></pre>
+<p><img src="/img/beep-beep-beep.png" alt="BEEP BEEP BEEP. The alarm clock is going off next to your bed." title="BEEP BEEP BEEP. The alarm clock is going off next to your bed."></p>
+<p>Yay! Now we have the start of the story. Because this is a choose-your-adventure, let's start adding choice! Let's use the <code>confirm("");</code> method to ask the player if they want to get out of bed. Confirm pops up a box that asks your user a yes or no question. In our story, we are going to ask if the user wants to shut off the alarm clock and get out of bed.</p>
+<pre><code>&#x3C;script>
+alert("BEEP BEEP BEEP. The alarm clock is going off next to your bed.");
+confirm("You should probably get out of bed now, it is a school day. (Press OK if you want to get out of bed, or cancel if you stay in bed and ignore your clock.)");
+&#x3C;/script>
+</code></pre>
+<p><img src="/img/git-out-of-bed.png" alt="You should probably get out of bed now, it is a school day. (Press OK if you want to get out of bed, or cancel if you stay in bed and ignore your clock.)" title="You should probably get out of bed now, it is a school day. (Press OK if you want to get out of bed, or cancel if you stay in bed and ignore your clock.)"></p>
+<p>Now, the player has choice! However, you might notice that clicking the buttons on the confirm box don't do anything. That is because we need to tell the program what to do when the player chooses whether to get out of bed or not!</p>
+<p>When the user clicks a button, the <code>confirm("");</code> method is being set to <code>true</code> if the user clicks <strong>OK</strong>, and <code>false</code> if the user clicks <strong>Cancel</strong>. By using <code>true</code> and <code>false</code>, Let's get that into a variable called <code>userGotOutOfBed</code>. A variable is like a box which stores information that we can look into later.</p>
+<pre><code>&#x3C;script>
+alert("BEEP BEEP BEEP. The alarm clock is going off next to your bed.");
+var userGotOutOfBed = confirm("You should probably get out of bed now, it is a school day. (Press OK if you want to get out of bed, or cancel if you stay in bed and ignore your clock.)");
+&#x3C;/script>
+</code></pre>
+<p><strong>Fun Fact!</strong> In JavaScript, when you name a variable, we have them in something called camelCase (notice the weird capitalization?). camelCase is when you use lowercase for the first word in a variable, then use Uppercase for the rest of the words in the variable. We name variables this way so that they are easier to read. <code>userGotOutOfBed</code> is way easier to read than <code>usergotoutofbed</code>.</p>
+<p><img src="/img/1200px-camelcase_new.svg.png" alt="camelCase" title="camelCase"></p>
+<p>Now that userGotOutOfBed is either <code>true</code> or <code>false</code> depending on what the player chose, we are going to make an <code>if () {}</code> statement to make the program do different things based on what the player chose. An <code>if</code> statement tests for a certain condition, (like if something is <code>true</code> or <code>false</code>).</p>
+<pre><code>&#x3C;script>
+alert("BEEP BEEP BEEP. The alarm clock is going off next to your bed.");
+var userGotOutOfBed = confirm("You should probably get out of bed now, it is a school day. (Press OK if you want to get out of bed, or cancel if you stay in bed and ignore your clock.)");
+
+if(userGotOutOfBed) {
+    alert("You got out of bed, and started a wonderful day! Isn't that nice...");
+}
+&#x3C;/script>
+</code></pre>
+<p>Let's break down this <code>if () {}</code> statement. First of all, there are parenthesis <code>()</code> that store the thing that the <code>if</code> is testing for. <code>if(userGotOutOfBed)</code> is asking "Is <code>userGotOutOfBed=true</code>?" If it is, it will run everything between the curly brakets <code>{}</code>.</p>
+<p>Now, when we click <strong>OK</strong>, we get a happy ending to our story where we get out of bed and start our day!</p>
+<p>However, when you click <strong>Cancel</strong>, nothing is happening! This is because our code is saying "Because <code>userGotOutOfBed</code> is <code>false</code>, we are going to skip over the <code>if</code>." We want something to happen when the condition is false! Luckily, there is something called the <code>else</code> statement, that runs everything betweern its <code>{}</code> if the condition is <strong>not</strong> met (<code>userGotOutOfBed = false</code>). Let's try adding a story ending where the user stays in bed, and doesn't wake up to the alarm clock.</p>
+<pre><code>&#x3C;script>
+alert("BEEP BEEP BEEP. The alarm clock is going off next to your bed.");
+var userGotOutOfBed = confirm("You should probably get out of bed now, it is a school day. (Press OK if you want to get out of bed, or cancel if you stay in bed and ignore your clock.)");
+
+if(userGotOutOfBed) {
+    alert("You got out of bed, and started a wonderful day! Isn't that nice...");
+} else {
+    alert("You chose not to get out of bed, and fall back asleep. Blissfully, you miss your math test today, and instead dream of sheep.");
+}
+&#x3C;/script>
+</code></pre>
+<p>Congratulations! You have your first choose your own adventure set up with multiple choices! Now, after the end of every game, let's say "THE END". To do this, we are going to put an <code>alert</code> method after the <code>if</code> statement to say our "THE END" message after every game, regardless of what path was chosen.</p>
+<pre><code>&#x3C;script>
+alert("BEEP BEEP BEEP. The alarm clock is going off next to your bed.");
+var userGotOutOfBed = confirm("You should probably get out of bed now, it is a school day. (Press OK if you want to get out of bed, or cancel if you stay in bed and ignore your clock.)");
+
+if(userGotOutOfBed) {
+    alert("You got out of bed, and started a wonderful day! Isn't that nice...");
+} else {
+    alert("You chose not to get out of bed, and fall back asleep. Blissfully, you miss your math test today, and instead dream of sheep.");
+}
+
+alert("THE END")
+&#x3C;/script>
+</code></pre>
+<p>Yay! Now feel free to tweak this story, add multiple paths using the <code>confirm</code> method, and go wild! Try making a game about a person in space, or an epic adventure! If you can't think of any ideas for your story, try thinking up alternate endings for a book or a movie! Your imagination is the limit!</p>
+<h2>Part III: Extension</h2>
+<p>There's more! The <code>prompt()</code> method lets you ask the user for custom messages! you can implement these into your story, or use them as story elements!</p>
+<pre><code>// Asking for your player's name
+var playerName = prompt("Please enter your name", "Harry Potter")
+alert("Hello, " + playerName + ". How are you today?")
+</code></pre>
+<p>This example asks for the players name, and has a default of Harry Potter if the player doesn't decide to put their name in. Then, it uses the player name in an <code>alert</code> method to repeat their name back to them.</p>
+<pre><code>// Asking how many marbles a player wants to pick out of a jar.
+var marbleCount = prompt("You come across a jar filled with marbles. You figure that nobody would mind if you take a few. How many do you want to take?", "0");
+
+
+if(marbleCount >= 4) {
+    alert("Wowza! You took a lot of marbles! You madlad.");
+} else {
+    alert("You took " + marbleCount + " marbles. That's a pretty reasonable amount, I would say.");
+}
+</code></pre>
+<p>This example asks for the amount of marbles someone would take out of a jar, and if it is greater than or equal to 4 (<code>>= 4</code>), it tells them that they took a lot of marbles. If not, it tells them how many marbles they took.</p>
+<p>Get creative! With the <code>prompt</code> method, you can ask the player where they would like to vacation, what they're favorite food is. Heck, you could even make something like a love calculator!</p>
+<p>Have fun! If you have any feedback for this workshop, or the club in general, please let us know by filling out this Google Form. Thanks!</p>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSevvl3M8dj1GoqdcS6uL8PfwwBezNtb2GAQIzXz6yMHhqGazg/viewform?embedded=true" width="640" height="1024" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/old-text-adventure";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-b74587b69fd7bed5ab12.js"],"app":["/app-ef116659a2de0b353058.js"],"component---src-pages-index-js":["/component---src-pages-index-js-0eb8dd4d4cb2abc15f16.js"],"component---src-templates-post-js":["/component---src-templates-post-js-39418d1cea313f5b3de3.js"]};/*]]>*/</script><script src="/polyfill-b74587b69fd7bed5ab12.js" nomodule=""></script><script src="/component---src-templates-post-js-39418d1cea313f5b3de3.js" async=""></script><script src="/app-ef116659a2de0b353058.js" async=""></script><script src="/532a2f07-661d9a9450b481d95118.js" async=""></script><script src="/framework-8f552c914ef4a0dd8955.js" async=""></script><script src="/webpack-runtime-c37c8c0e5fea5970342d.js" async=""></script></body></html>

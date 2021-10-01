@@ -1,0 +1,450 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 3.14.1"/><title data-react-helmet="true"></title><style data-styled="" data-styled-version="5.3.1"></style><link rel="icon" href="/favicon-32x32.png?v=3a318e3ceb32f2e06b497c0795ae14cb" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#7FD0D8"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=3a318e3ceb32f2e06b497c0795ae14cb"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=3a318e3ceb32f2e06b497c0795ae14cb"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=3a318e3ceb32f2e06b497c0795ae14cb"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=3a318e3ceb32f2e06b497c0795ae14cb"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=3a318e3ceb32f2e06b497c0795ae14cb"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=3a318e3ceb32f2e06b497c0795ae14cb"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=3a318e3ceb32f2e06b497c0795ae14cb"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=3a318e3ceb32f2e06b497c0795ae14cb"/><link as="script" rel="preload" href="/webpack-runtime-c37c8c0e5fea5970342d.js"/><link as="script" rel="preload" href="/framework-8f552c914ef4a0dd8955.js"/><link as="script" rel="preload" href="/532a2f07-661d9a9450b481d95118.js"/><link as="script" rel="preload" href="/app-ef116659a2de0b353058.js"/><link as="script" rel="preload" href="/component---src-templates-post-js-39418d1cea313f5b3de3.js"/><link as="fetch" rel="preload" href="/page-data/simple-javascript-game/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div style="margin:2em"><h1>P2P Hack Club Meeting 4: Create a simple game using JavaScript!</h1><h4 style="color:rgb(165, 164, 164)">P2P hack club team, modified from an article by MDN</h4><div><h2>Part I: Setup</h2>
+<p>Again, we're using <a href="https://www.pumatech.org">Pumatech</a> today! To get started, go to <a href="https://www.pumatech.org">https://www.pumatech.org</a>. When you're there create a new HTML document and save it as <code>brickbreaker.html</code>. Today's game we'll be creating is a Break Breaker ball game!</p>
+<p><img src="/img/mdn-breakout-gameplay.png" alt="Image of Brick Breaker Game" title="This is what you are going to build. SO COOL!"></p>
+<h2>Part II: Creating the Canvas</h2>
+<h3>Creating the Canvas Base</h3>
+<p>First things first, we have to add the HTML document structure: html, head, and body. (Need a cheat sheet? Take a look at this <a href="https://docs.google.com/document/d/1R0S5fqrL8e_dMbramMEKRs6elU3VSHqHOLNP3rlm9fw/edit">document</a>). Here's what your code should look like right now:</p>
+<pre><code>&#x3C;!DOCTYPE html>
+&#x3C;html>
+
+&#x3C;head>
+&#x3C;/head>
+
+&#x3C;body>
+&#x3C;/body>
+
+&#x3C;/html>
+</code></pre>
+<p>Seems simple right? This is because your game will be rendered entirely on the <code>&#x3C;canvas></code> element. Next, add in the following code:</p>
+<pre><code>&#x3C;!DOCTYPE html>
+&#x3C;html>
+
+&#x3C;head>
+&#x3C;meta charset="utf-8" />
+&#x3C;title>&#x3C;/title> // Your amazing game title goes here!
+&#x3C;style>
+* {
+padding: 0;
+margin: 0;
+}
+
+canvas {
+background: #eee;
+display: block;
+margin: 0 auto;
+}
+
+&#x3C;/style>
+&#x3C;/head>
+
+&#x3C;body>
+&#x3C;canvas id="myCanvas" width="480" height="320">&#x3C;/canvas>
+&#x3C;script>
+// JavaScript code goes here
+&#x3C;/script>
+&#x3C;/body>
+&#x3C;/html>
+</code></pre>
+<p>In our code we have a <code>charset</code> defined, <code>&#x3C;title></code> and some CSS in the <code>&#x3C;head></code>. The charset attribute specifies the character encoding for the HTML document. The body contains <code>&#x3C;canvas></code> and <code>&#x3C;script></code> elements — we'll create the game inside the canva and write the JavaScript code that controls it in the script. The <code>&#x3C;canvas></code> element has an id of myCanvas, which allows us to easily get a reference to it, and it is 480 pixels wide and 320 pixels high. All the JavaScript code we will write today will go between the opening <code>&#x3C;script></code> and closing <code>&#x3C;/script></code> tags.</p>
+<h2>Part II: Adding the Ball</h2>
+<h3>1) Setting up</h3>
+<p>In order to create graphics on the <code>&#x3C;canvas></code>, we first have to grab a reference to it in JavaScript. Add the following under your opening <code>&#x3C;script></code> tag:</p>
+<pre><code>var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+</code></pre>
+<p>The first line of code is storing a reference to the <code>&#x3C;canvas></code> element, while the second line of code is using a <code>ctx</code> variable to store the 2D context (The tool we can use to paint on the canvas)</p>
+<p>Next, we'll be defining a starting point at the bottom center of our canvas by using variables called <code>x</code> and <code>y</code>, then use those to define the position the circle is drawn at. Add the following under the code you just wrote above:</p>
+<pre><code>var ballRadius = 10;
+var x = canvas.width/2;
+var y = canvas.height-30;
+</code></pre>
+<p>Next, we want to add a small value to x and y after every frame has been drawn to make it appear that the ball is moving. Let's call these small values as dx and dy and set their values to 2 and -2. Add them below your x and y variable definitions:</p>
+<pre><code>var dx = 2;var dy = -2;
+</code></pre>
+<h3>2) Adding our ball</h3>
+<p>As you can see from the header above, we're now going to be adding our ball! The following code below draws out and moves our ball:</p>
+<pre><code>function drawBall() {
+ctx.beginPath();
+ctx.arc(x, y, 10, 0, Math.PI*2);
+ctx.fillStyle = "#0095DD";
+ctx.fill();
+ctx.closePath();
+}
+</code></pre>
+<p>The code below us shows the code for our paddle. It'll also tell us when it's game over. Put this right under the code above:</p>
+<pre><code>function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  drawBricks();
+  drawBall();
+  drawPaddle();
+  drawScore();
+  drawLives();
+  collisionDetection();
+  if(x + dx > canvas.width-ballRadius || x + dx &#x3C; ballRadius) {
+    dx = -dx;
+  }
+  if(y + dy &#x3C; ballRadius) {
+    dy = -dy;
+  }
+  else if(y + dy > canvas.height-ballRadius) {
+    if(x > paddleX &#x26;&#x26; x &#x3C; paddleX + paddleWidth) {
+      dy = -dy;
+    }
+    else {
+      lives--;
+      if(!lives) {
+        alert("GAME OVER");
+        document.location.reload();
+      }
+      else {
+        x = canvas.width/2;
+        y = canvas.height-30;
+        dx = 3;
+        dy = -3;
+        paddleX = (canvas.width-paddleWidth)/2;
+      }
+    }
+  }
+
+  if(rightPressed &#x26;&#x26; paddleX &#x3C; canvas.width-paddleWidth) {
+    paddleX += 7;
+  }
+  else if(leftPressed &#x26;&#x26; paddleX > 0) {
+    paddleX -= 7;
+  }
+
+  x += dx;
+  y += dy;
+  requestAnimationFrame(draw);
+}
+
+draw();
+</code></pre>
+<h2>Part III: Adding a Paddle</h2>
+<p>So, now we need a paddle to hit the ball. Let's define a few variables for that. Add the following variables near the top of your code, under <code>var dy = -2;</code> :</p>
+<pre><code>var paddleHeight = 10;
+var paddleWidth = 75;
+var paddleX = (canvas.width-paddleWidth)/2;
+var rightPressed = false;
+var leftPressed = false;
+</code></pre>
+<p>The default value for the last two lines is false because at the beginning the control buttons are not pressed. To listen for key presses, we will set up two event listeners. Add the following lines just a few lines under the code above in your JavaScript:</p>
+<pre><code>document.addEventListener("keydown", keyDownHandler, false);
+document.addEventListener("keyup", keyUpHandler, false);
+</code></pre>
+<p>Now we need functions for when the keys are pressed. Add the following right under the code above:</p>
+<pre><code>function keyDownHandler(e) {
+    if(e.key == "Right" || e.key == "ArrowRight") {
+        rightPressed = true;
+  }
+    else if(e.key == "Left" || e.key == "ArrowLeft") {
+        leftPressed = true;
+  }
+}
+function keyUpHandler(e) {
+    if(e.key == "Right" || e.key == "ArrowRight") {
+        rightPressed = false;
+  }
+    else if(e.key == "Left" || e.key == "ArrowLeft") {
+        leftPressed = false;
+  }
+}
+</code></pre>
+<p>We cant play the game if there isn't a paddle! Add the following under <code>function drawBall() {:</code></p>
+<pre><code>function drawPaddle() {
+   ctx.beginPath();
+   ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
+   ctx.fillStyle = "#0095DD";
+   ctx.fill();
+   ctx.closePath();
+}
+</code></pre>
+<h2>Part IV: Bricks</h2>
+<h3>1) Variables</h3>
+<p>First off, we need variables for our bricks. Add these below <code>var leftPressed = false;</code>:</p>
+<pre><code>var brickRowCount = 5;
+var brickColumnCount = 3;
+var brickWidth = 75;
+var brickHeight = 20;
+var brickPadding = 10;
+var brickOffsetTop = 30;
+var brickOffsetLeft = 30;
+</code></pre>
+<p>The code below loops around the rows and columns and create the new bricks. Add this right under the code you just wrote above:</p>
+<pre><code>var bricks = [];
+for(var c=0; c&#x3C;brickColumnCount; c++) {
+bricks[c] = [];
+for(var r=0; r&#x3C;brickRowCount; r++) {
+bricks[c][r] = { x: 0, y: 0, status: 1 };
+ }
+}
+</code></pre>
+<h3>2) Drawing our bricks</h3>
+<p>We actually need bricks in order to play our game! Add this code below <code>function drawPaddle()</code>:</p>
+<pre><code>function drawBricks() {
+    for (var c = 0; c &#x3C; brickColumnCount; c++) {
+        for (var r = 0; r &#x3C; brickRowCount; r++) {
+            if (bricks[c][r].status == 1) {
+            var brickX = (c * (brickWidth + brickPadding)) + brickOffsetLeft;
+            var brickY = (r * (brickHeight + brickPadding)) + brickOffsetTop;
+            bricks[c][r].x = brickX;
+            bricks[c][r].y = brickY;
+            ctx.beginPath();
+            ctx.rect(brickX, brickY, brickWidth, brickHeight);
+            ctx.fillStyle = "#0095DD";
+            ctx.fill();
+            ctx.closePath();
+            }
+        }
+    }
+}
+</code></pre>
+<h3>3) Collision Detection</h3>
+<p>The code below enables collision detection between our ball and bricks. It also shows a "You win!" notification if you complete the game. Add this below function <code>keyUpHandler (e)</code>:</p>
+<pre><code>function collisionDetection() {
+for (var c = 0; c &#x3C; brickColumnCount; c++) {
+    for (var r = 0; r &#x3C; brickRowCount; r++) {
+    var b = bricks[c][r];
+        if (b.status == 1) {
+            if (x > b.x &#x26;&#x26; x &#x3C; b.x + brickWidth &#x26;&#x26; y > b.y &#x26;&#x26; y &#x3C; b.y + brickHeight){
+                dy = -dy;
+                b.status = 0;
+                score++;
+                    if(score == brickRowCount*brickColumnCount) {
+                        alert("YOU WIN, CONGRATULATIONS!");
+                        document.location.reload();
+                    }
+                }
+            }
+        }
+    }
+}
+</code></pre>
+<h2>Part V: Adding our score</h2>
+<p>First off, we need our variables. Add this under <code>var brickOffsetLeft = 30;</code> :</p>
+<pre><code>var score = 0;
+</code></pre>
+<p>Next, we're going to add code that remembers our score. Add this code right under <code>function drawBricks()</code>:</p>
+<pre><code>function drawScore() {  ctx.font = "16px Arial";  ctx.fillStyle = "#0095DD";  ctx.fillText("Score: "+score, 8, 20);}
+</code></pre>
+<h2>Part VI: Mouse Movement</h2>
+<p>All we need is a listener for mousemove. This next line of code can do that! Add this right under <code>document.addEventListener("keyup", keyUpHandler, false);</code> :</p>
+<pre><code>document.addEventListener("mousemove", mouseMoveHandler, false);
+</code></pre>
+<p>Next, we need a function to update the paddle position based on the pointer coordinates. Add this under the code you just inputted above:</p>
+<pre><code>function mouseMoveHandler(e) {
+    var relativeX = e.clientX - canvas.offsetLeft;
+    if(relativeX > 0 &#x26;&#x26; relativeX &#x3C; canvas.width) {
+        paddleX = relativeX - paddleWidth/2;
+    }
+}
+</code></pre>
+<h2>Part VII: Lives</h2>
+<p>We're almost done! The second to last step is adding lives. Add this variable under <code>var score=0;</code>:</p>
+<pre><code>var lives = 3;
+</code></pre>
+<p>Lastly, we need a function that can draw the score counter. Add this code right under <code>function drawScore()</code> :</p>
+<pre><code>function drawLives() {
+  ctx.font = "16px Arial";
+  ctx.fillStyle = "#0095DD";
+  ctx.fillText("Lives: "+lives, canvas.width-65, 20);
+}
+</code></pre>
+<p>Ta da! You did it! Now experiment with your game and make it unique!!! Let us know if you have any ideas that you want to create for next meeting!</p>
+<p><strong>P.S.</strong> If you are having any trouble with this article, feel free to see the original! <a href="https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript">https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript</a></p>
+<p>Here is our final code:</p>
+<pre><code>&#x3C;!DOCTYPE html>
+&#x3C;html>
+
+&#x3C;head>
+&#x3C;meta charset="utf-8" />
+&#x3C;title>&#x3C;/title>
+&#x3C;style>
+* {
+padding: 0;
+margin: 0;
+}
+
+canvas {
+background: #eee;
+display: block;
+margin: 0 auto;
+}
+
+&#x3C;/style>
+&#x3C;/head>
+
+&#x3C;body>
+&#x3C;canvas id="myCanvas" width="480" height="320">&#x3C;/canvas>
+&#x3C;script>
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+var ballRadius = 10;
+var x = canvas.width/2;
+var y = canvas.height-30;
+var dx = 2;
+var dy = -2;
+var paddleHeight = 10;
+var paddleWidth = 75;
+var paddleX = (canvas.width-paddleWidth)/2;
+var rightPressed = false;
+var leftPressed = false;
+var brickRowCount = 5;
+var brickColumnCount = 3;
+var brickWidth = 75;
+var brickHeight = 20;
+var brickPadding = 10;
+var brickOffsetTop = 30;
+var brickOffsetLeft = 30;
+var score = 0;
+var lives = 3;
+
+var bricks = [];
+for(var c=0; c&#x3C;brickColumnCount; c++) {
+  bricks[c] = [];
+  for(var r=0; r&#x3C;brickRowCount; r++) {
+    bricks[c][r] = { x: 0, y: 0, status: 1 };
+  }
+}
+
+document.addEventListener("keydown", keyDownHandler, false);
+document.addEventListener("keyup", keyUpHandler, false);
+document.addEventListener("mousemove", mouseMoveHandler, false);
+
+function keyDownHandler(e) {
+    if(e.key == "Right" || e.key == "ArrowRight") {
+        rightPressed = true;
+    }
+    else if(e.key == "Left" || e.key == "ArrowLeft") {
+        leftPressed = true;
+    }
+}
+
+function keyUpHandler(e) {
+    if(e.key == "Right" || e.key == "ArrowRight") {
+        rightPressed = false;
+    }
+    else if(e.key == "Left" || e.key == "ArrowLeft") {
+        leftPressed = false;
+    }
+}
+
+function mouseMoveHandler(e) {
+  var relativeX = e.clientX - canvas.offsetLeft;
+  if(relativeX > 0 &#x26;&#x26; relativeX &#x3C; canvas.width) {
+    paddleX = relativeX - paddleWidth/2;
+  }
+}
+function collisionDetection() {
+  for(var c=0; c&#x3C;brickColumnCount; c++) {
+    for(var r=0; r&#x3C;brickRowCount; r++) {
+      var b = bricks[c][r];
+      if(b.status == 1) {
+        if(x > b.x &#x26;&#x26; x &#x3C; b.x+brickWidth &#x26;&#x26; y > b.y &#x26;&#x26; y &#x3C; b.y+brickHeight) {
+          dy = -dy;
+          b.status = 0;
+          score++;
+          if(score == brickRowCount*brickColumnCount) {
+            alert("YOU WIN, CONGRATS!");
+            document.location.reload();
+          }
+        }
+      }
+    }
+  }
+}
+
+function drawBall() {
+  ctx.beginPath();
+  ctx.arc(x, y, ballRadius, 0, Math.PI*2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
+}
+function drawPaddle() {
+  ctx.beginPath();
+  ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
+}
+function drawBricks() {
+  for(var c=0; c&#x3C;brickColumnCount; c++) {
+    for(var r=0; r&#x3C;brickRowCount; r++) {
+      if(bricks[c][r].status == 1) {
+        var brickX = (r*(brickWidth+brickPadding))+brickOffsetLeft;
+        var brickY = (c*(brickHeight+brickPadding))+brickOffsetTop;
+        bricks[c][r].x = brickX;
+        bricks[c][r].y = brickY;
+        ctx.beginPath();
+        ctx.rect(brickX, brickY, brickWidth, brickHeight);
+        ctx.fillStyle = "#0095DD";
+        ctx.fill();
+        ctx.closePath();
+      }
+    }
+  }
+}
+function drawScore() {
+  ctx.font = "16px Arial";
+  ctx.fillStyle = "#0095DD";
+  ctx.fillText("Score: "+score, 8, 20);
+}
+function drawLives() {
+  ctx.font = "16px Arial";
+  ctx.fillStyle = "#0095DD";
+  ctx.fillText("Lives: "+lives, canvas.width-65, 20);
+}
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  drawBricks();
+  drawBall();
+  drawPaddle();
+  drawScore();
+  drawLives();
+  collisionDetection();
+
+  if(x + dx > canvas.width-ballRadius || x + dx &#x3C; ballRadius) {
+    dx = -dx;
+  }
+  if(y + dy &#x3C; ballRadius) {
+    dy = -dy;
+  }
+  else if(y + dy > canvas.height-ballRadius) {
+    if(x > paddleX &#x26;&#x26; x &#x3C; paddleX + paddleWidth) {
+      dy = -dy;
+    }
+    else {
+      lives--;
+      if(!lives) {
+        alert("GAME OVER");
+        document.location.reload();
+      }
+      else {
+        x = canvas.width/2;
+        y = canvas.height-30;
+        dx = 3;
+        dy = -3;
+        paddleX = (canvas.width-paddleWidth)/2;
+      }
+    }
+  }
+
+  if(rightPressed &#x26;&#x26; paddleX &#x3C; canvas.width-paddleWidth) {
+    paddleX += 7;
+  }
+  else if(leftPressed &#x26;&#x26; paddleX > 0) {
+    paddleX -= 7;
+  }
+
+  x += dx;
+  y += dy;
+  requestAnimationFrame(draw);
+}
+
+draw();
+&#x3C;/script>
+&#x3C;/body>
+&#x3C;/html>
+</code></pre></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/simple-javascript-game";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-b74587b69fd7bed5ab12.js"],"app":["/app-ef116659a2de0b353058.js"],"component---src-pages-index-js":["/component---src-pages-index-js-0eb8dd4d4cb2abc15f16.js"],"component---src-templates-post-js":["/component---src-templates-post-js-39418d1cea313f5b3de3.js"]};/*]]>*/</script><script src="/polyfill-b74587b69fd7bed5ab12.js" nomodule=""></script><script src="/component---src-templates-post-js-39418d1cea313f5b3de3.js" async=""></script><script src="/app-ef116659a2de0b353058.js" async=""></script><script src="/532a2f07-661d9a9450b481d95118.js" async=""></script><script src="/framework-8f552c914ef4a0dd8955.js" async=""></script><script src="/webpack-runtime-c37c8c0e5fea5970342d.js" async=""></script></body></html>
