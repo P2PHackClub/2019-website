@@ -1,9 +1,10 @@
 ---
-title: 'P2P Hack Club Meeting 6: Most Creative Story Competition'
+title: "P2P Hack Club Meeting 6: Most Creative Story Competition"
 description: Now is the time to put your skills that you learned last time to good use!
 author: P2P Hack Club Team
 slug: text-adventure
 ---
+
 Welcome to Hack Club Meeting 6!
 
 At the last meeting, we learned how to make text adventures using JavaScript `alert`, `prompt`, and `confirm` methods! We decided that because your stories were turning out amazing so far, that we would host a competition for the most creative story!
@@ -142,13 +143,13 @@ Now that userGotOutOfBed is either `true` or `false` depending on what the playe
 alert("BEEP BEEP BEEP. The alarm clock is going off next to your bed.");
 var userGotOutOfBed = confirm("You should probably get out of bed now, it is a school day. (Press OK if you want to get out of bed, or cancel if you stay in bed and ignore your clock.)");
 
-if(userGotOutOfBed) {    
+if(userGotOutOfBed) {
     alert("You got out of bed, and started a wonderful day! Isn't that nice...");
-} 
+}
 </script>
 ```
 
-Let's break down this `if () {}` statement. First of all, there are parenthesis `()` that store the thing that the `if` is testing for. `if(userGotOutOfBed)` is asking "Is `userGotOutOfBed=true`?" If it is, it will run everything between the curly brakets `{}`. 
+Let's break down this `if () {}` statement. First of all, there are parenthesis `()` that store the thing that the `if` is testing for. `if(userGotOutOfBed)` is asking "Is `userGotOutOfBed=true`?" If it is, it will run everything between the curly brakets `{}`.
 
 Now, when we click **OK**, we get a happy ending to our story where we get out of bed and start our day!
 
@@ -159,9 +160,9 @@ However, when you click **Cancel**, nothing is happening! This is because our co
 alert("BEEP BEEP BEEP. The alarm clock is going off next to your bed.");
 var userGotOutOfBed = confirm("You should probably get out of bed now, it is a school day. (Press OK if you want to get out of bed, or cancel if you stay in bed and ignore your clock.)");
 
-if(userGotOutOfBed) {    
+if(userGotOutOfBed) {
     alert("You got out of bed, and started a wonderful day! Isn't that nice...");
-} else {    
+} else {
     alert("You chose not to get out of bed, and fall back asleep. Blissfully, you miss your math test today, and instead dream of sheep.");
 }
 </script>
@@ -174,9 +175,9 @@ Congratulations! You have your first choose your own adventure set up with multi
 alert("BEEP BEEP BEEP. The alarm clock is going off next to your bed.");
 var userGotOutOfBed = confirm("You should probably get out of bed now, it is a school day. (Press OK if you want to get out of bed, or cancel if you stay in bed and ignore your clock.)");
 
-if(userGotOutOfBed) {    
+if(userGotOutOfBed) {
     alert("You got out of bed, and started a wonderful day! Isn't that nice...");
-} else {    
+} else {
     alert("You chose not to get out of bed, and fall back asleep. Blissfully, you miss your math test today, and instead dream of sheep.");
 }
 
@@ -220,9 +221,9 @@ Thanks for coming to the meeting today! We just wanted to remind you that our fi
 
 Even though we won't be having our regular meetings until next year, that doesn't mean you need to stop coding! During Thanksgiving and Winter break, here are some cool websites that you continue programming on! (Remember to ask your parents first before you sign up for an account!)
 
-* [Code.org is a website that teaches HTML, CSS, and JS! Check it out here!](https://code.org/student/middle-high)
-* [Shortly after our last meeting this year, from December 9-15th, Hour of Code is happening! Hour of Code is a week-long event where students from all over the world program and create a project in one hour! Activities range from programming Minecraft, drawing with code, creating your own avatars, and more! Check it out here!](https://hourofcode.com/us/learn)
-* [Khan Academy is also participating in Hour of Code, and they have a whole programming track on their site! Check it out here!](https://www.khanacademy.org/hourofcode)
-* [CodeAcademy is another great resource, like code.org, with web languages like HTML, CSS, and JS, as well as Python!](https://www.codecademy.com/)
+- [Code.org is a website that teaches HTML, CSS, and JS! Check it out here!](https://code.org/student/middle-high)
+- [Shortly after our last meeting this year, from December 9-15th, Hour of Code is happening! Hour of Code is a week-long event where students from all over the world program and create a project in one hour! Activities range from programming Minecraft, drawing with code, creating your own avatars, and more! Check it out here!](https://hourofcode.com/us/learn)
+- [Khan Academy is also participating in Hour of Code, and they have a whole programming track on their site! Check it out here!](https://www.khanacademy.org/hourofcode)
+- [CodeAcademy is another great resource, like code.org, with web languages like HTML, CSS, and JS, as well as Python!](https://www.codecademy.com/)
 
 Of course, if you ever have any questions, or you want to share anything that you made, you can always talk to us during school, or email us! We'll try to answer your questions as soon as possible. Thanks for being awesome!!

@@ -1,9 +1,10 @@
 ---
-title: 'P2P Hack Club Meeting 5: Create a text-adventure video game in JavaScript'
+title: "P2P Hack Club Meeting 5: Create a text-adventure video game in JavaScript"
 description: Game time!
 author: P2P Hack Club Team
 slug: old-text-adventure
 ---
+
 Yay! Welcome to our 5th meeting of P2P Hack Club! Today, we're going to be creating a text-based adventure game using JavaScript, with branching paths.
 
 ![Journey Under The Sea By R.A. Montgomery](/img/cyoa002hb.jpg "Journey Under The Sea By R.A. Montgomery")
@@ -86,13 +87,13 @@ Now that userGotOutOfBed is either `true` or `false` depending on what the playe
 alert("BEEP BEEP BEEP. The alarm clock is going off next to your bed.");
 var userGotOutOfBed = confirm("You should probably get out of bed now, it is a school day. (Press OK if you want to get out of bed, or cancel if you stay in bed and ignore your clock.)");
 
-if(userGotOutOfBed) {    
+if(userGotOutOfBed) {
     alert("You got out of bed, and started a wonderful day! Isn't that nice...");
-} 
+}
 </script>
 ```
 
-Let's break down this `if () {}` statement. First of all, there are parenthesis `()` that store the thing that the `if` is testing for. `if(userGotOutOfBed)` is asking "Is `userGotOutOfBed=true`?" If it is, it will run everything between the curly brakets `{}`. 
+Let's break down this `if () {}` statement. First of all, there are parenthesis `()` that store the thing that the `if` is testing for. `if(userGotOutOfBed)` is asking "Is `userGotOutOfBed=true`?" If it is, it will run everything between the curly brakets `{}`.
 
 Now, when we click **OK**, we get a happy ending to our story where we get out of bed and start our day!
 
@@ -103,9 +104,9 @@ However, when you click **Cancel**, nothing is happening! This is because our co
 alert("BEEP BEEP BEEP. The alarm clock is going off next to your bed.");
 var userGotOutOfBed = confirm("You should probably get out of bed now, it is a school day. (Press OK if you want to get out of bed, or cancel if you stay in bed and ignore your clock.)");
 
-if(userGotOutOfBed) {    
+if(userGotOutOfBed) {
     alert("You got out of bed, and started a wonderful day! Isn't that nice...");
-} else {    
+} else {
     alert("You chose not to get out of bed, and fall back asleep. Blissfully, you miss your math test today, and instead dream of sheep.");
 }
 </script>
@@ -118,9 +119,9 @@ Congratulations! You have your first choose your own adventure set up with multi
 alert("BEEP BEEP BEEP. The alarm clock is going off next to your bed.");
 var userGotOutOfBed = confirm("You should probably get out of bed now, it is a school day. (Press OK if you want to get out of bed, or cancel if you stay in bed and ignore your clock.)");
 
-if(userGotOutOfBed) {    
+if(userGotOutOfBed) {
     alert("You got out of bed, and started a wonderful day! Isn't that nice...");
-} else {    
+} else {
     alert("You chose not to get out of bed, and fall back asleep. Blissfully, you miss your math test today, and instead dream of sheep.");
 }
 

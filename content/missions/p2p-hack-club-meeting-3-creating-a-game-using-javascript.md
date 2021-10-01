@@ -1,9 +1,10 @@
 ---
-title: 'P2P Hack Club Meeting 4: Create a simple game using JavaScript!'
+title: "P2P Hack Club Meeting 4: Create a simple game using JavaScript!"
 description: Learn how to create a simple game using JavaScript!
-author: 'P2P hack club team, modified from an article by MDN'
+author: "P2P hack club team, modified from an article by MDN"
 slug: simple-javascript-game
 ---
+
 ## Part I: Setup
 
 Again, we're using [Pumatech](https://www.pumatech.org) today! To get started, go to <https://www.pumatech.org>. When you're there create a new HTML document and save it as `brickbreaker.html`. Today's game we'll be creating is a Break Breaker ball game!
@@ -14,7 +15,7 @@ Again, we're using [Pumatech](https://www.pumatech.org) today! To get started, g
 
 ### Creating the Canvas Base
 
-First things first, we have to add the HTML document structure: html, head, and body. (Need a cheat sheet? Take a look at this [document](https://docs.google.com/document/d/1R0S5fqrL8e_dMbramMEKRs6elU3VSHqHOLNP3rlm9fw/edit)). Here's what your code should look like right now: 
+First things first, we have to add the HTML document structure: html, head, and body. (Need a cheat sheet? Take a look at this [document](https://docs.google.com/document/d/1R0S5fqrL8e_dMbramMEKRs6elU3VSHqHOLNP3rlm9fw/edit)). Here's what your code should look like right now:
 
 ```
 <!DOCTYPE html>
@@ -35,19 +36,19 @@ Seems simple right? This is because your game will be rendered entirely on the `
 <!DOCTYPE html>
 <html>
 
-<head>    
-<meta charset="utf-8" /> 
+<head>
+<meta charset="utf-8" />
 <title></title> // Your amazing game title goes here!
-<style>	       
-* { 
-padding: 0; 
-margin: 0; 
+<style>
+* {
+padding: 0;
+margin: 0;
 }
 
-canvas { 
+canvas {
 background: #eee;
 display: block;
-margin: 0 auto; 
+margin: 0 auto;
 }
 
 </style>
@@ -68,7 +69,7 @@ In our code we have a `charset` defined, `<title>` and some CSS in the `<head>`.
 
 ### 1) Setting up
 
- In order to create graphics on the `<canvas>`, we first have to grab a reference to it in JavaScript. Add the following under your opening `<script>` tag:
+In order to create graphics on the `<canvas>`, we first have to grab a reference to it in JavaScript. Add the following under your opening `<script>` tag:
 
 ```
 var canvas = document.getElementById("myCanvas");
@@ -88,7 +89,7 @@ var y = canvas.height-30;
 Next, we want to add a small value to x and y after every frame has been drawn to make it appear that the ball is moving. Let's call these small values as dx and dy and set their values to 2 and -2. Add them below your x and y variable definitions:
 
 ```
-var dx = 2;var dy = -2; 
+var dx = 2;var dy = -2;
 ```
 
 ### 2) Adding our ball
@@ -213,7 +214,7 @@ function drawPaddle() {
 
 ### 1) Variables
 
-First off, we need variables for our bricks. Add these below `var leftPressed = false;`: 
+First off, we need variables for our bricks. Add these below `var leftPressed = false;`:
 
 ```
 var brickRowCount = 5;
@@ -263,14 +264,14 @@ function drawBricks() {
 
 ### 3) Collision Detection
 
-The code below enables collision detection between our ball and bricks. It also shows a "You win!"  notification if you complete the game. Add this below function `keyUpHandler (e)`:
+The code below enables collision detection between our ball and bricks. It also shows a "You win!" notification if you complete the game. Add this below function `keyUpHandler (e)`:
 
 ```
 function collisionDetection() {
 for (var c = 0; c < brickColumnCount; c++) {
     for (var r = 0; r < brickRowCount; r++) {
     var b = bricks[c][r];
-        if (b.status == 1) {  
+        if (b.status == 1) {
             if (x > b.x && x < b.x + brickWidth && y > b.y && y < b.y + brickHeight){
                 dy = -dy;
                 b.status = 0;
@@ -347,19 +348,19 @@ Here is our final code:
 <!DOCTYPE html>
 <html>
 
-<head>    
-<meta charset="utf-8" /> 
+<head>
+<meta charset="utf-8" />
 <title></title>
-<style>        
-* { 
-padding: 0; 
-margin: 0; 
+<style>
+* {
+padding: 0;
+margin: 0;
 }
 
-canvas { 
+canvas {
 background: #eee;
 display: block;
-margin: 0 auto; 
+margin: 0 auto;
 }
 
 </style>

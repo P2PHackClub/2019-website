@@ -1,6 +1,6 @@
-import React from "react";
+import React from "react"
 
-const Logo = props => (
+const Logo = (props) => (
   <svg viewBox="0 0 121.27 139.06" {...props}>
     <defs>
       <style>
@@ -96,6 +96,6 @@ const Logo = props => (
       </g>
     </g>
   </svg>
-);
+)
 
-export default Logo;
+export default Logo

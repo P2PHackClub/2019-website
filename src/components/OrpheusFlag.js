@@ -1,8 +1,8 @@
-import React from "react";
-import { theme } from '@hackclub/design-system'
-import styled, { css, keyframes } from 'styled-components'
+import React from "react"
+import { theme } from "@hackclub/design-system"
+import styled, { css, keyframes } from "styled-components"
 
-const Flag = props => (
+const Flag = (props) => (
   <svg id="Layer_1" viewBox="0 0 288.6 131.9" {...props}>
     <style>
       {".st0{fill:#fff;stroke:#000;stroke-width:3;stroke-miterlimit:10}"}
@@ -38,7 +38,7 @@ const Flag = props => (
       strokeMiterlimit={10}
     />
   </svg>
-);
+)
 
 const waveFlag = keyframes`
   from {
@@ -71,7 +71,7 @@ const OrpheusFlag = styled(Flag)`
   ${theme.mediaQueries.reduceMotion} {
     animation: none !important;
   }
-  ${props =>
+  ${(props) =>
     props.scrolled &&
     css`
       transform: scale(0.75);
@@ -83,9 +83,8 @@ const OrpheusFlag = styled(Flag)`
     `};
 `
 OrpheusFlag.defaultProps = {
-  to: '/',
-  'aria-label': 'Homepage'
+  to: "/",
+  "aria-label": "Homepage",
 }
 
-
-export default OrpheusFlag;
+export default OrpheusFlag

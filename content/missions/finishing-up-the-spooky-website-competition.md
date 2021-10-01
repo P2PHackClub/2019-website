@@ -4,6 +4,7 @@ description: Let's get spooky!
 author: P2P Hack Club
 slug: spooky-website-comp
 ---
+
 # HAPPY HALLOWEEN!!!!!!!!
 
 I hope you are having a fabulously spooky day!
@@ -56,15 +57,15 @@ When you're first starting out your website, you might want some code to jump of
 
 Each of these lines of code that start with `<` and end with `>` are called tags. Each tag is responsible for a different job.
 
-* `<!DOCTYPE html>`is a line of code that tells your browser (Google Chrome, Firefox, etc), that the file that it is viewing is an HTML webpage. HTML, or **H**yper **T**ext **M**arkup **L**anguage is the language that you are typing in that the computer understands.
-* `<html lang="en">` is telling the browser that the code to run your webpage is starting. `</html>` is a **closing tag**, which lets you know that it is at the end of the webpage.
-* `<head>` and `</head>` are tags that indicate that information about the website are stored between those two tags.
-  * `<title>` and `</title>` are tags that go between the `<head>` and `</head>` tags. This element tells the browser what the website name is. Try changing this to `<title>My amazing website!</title>`. When you run your website (CTRL+E), you will see the text change in the browser tab!
+- `<!DOCTYPE html>`is a line of code that tells your browser (Google Chrome, Firefox, etc), that the file that it is viewing is an HTML webpage. HTML, or **H**yper **T**ext **M**arkup **L**anguage is the language that you are typing in that the computer understands.
+- `<html lang="en">` is telling the browser that the code to run your webpage is starting. `</html>` is a **closing tag**, which lets you know that it is at the end of the webpage.
+- `<head>` and `</head>` are tags that indicate that information about the website are stored between those two tags.
+  - `<title>` and `</title>` are tags that go between the `<head>` and `</head>` tags. This element tells the browser what the website name is. Try changing this to `<title>My amazing website!</title>`. When you run your website (CTRL+E), you will see the text change in the browser tab!
 
 ![An arrow pointing to a browser tab.](/img/captura.png "Look! It's your website!")
 
-* `<style>` and `</style>` are tags that tell the browser how the webpage should look. Between these two tags, you can specify the color of your website, animations on your website, and more! (You can learn more about this tag a little later in this document).
-* `<body>` and `</body>` are two very important tags. Between those tags holds the content of your website! Stuff like text and images go here.
+- `<style>` and `</style>` are tags that tell the browser how the webpage should look. Between these two tags, you can specify the color of your website, animations on your website, and more! (You can learn more about this tag a little later in this document).
+- `<body>` and `</body>` are two very important tags. Between those tags holds the content of your website! Stuff like text and images go here.
 
 ### Put text on your website.
 
@@ -114,7 +115,7 @@ In context, here is what the full site code looks like:
 
 ### Put an image on your website
 
-Now that we have a bunch of text, it is time for some images! To add images to our website, we use an element called the image element (pretty obvious naming, right?). 
+Now that we have a bunch of text, it is time for some images! To add images to our website, we use an element called the image element (pretty obvious naming, right?).
 
 `<img src="">`
 
@@ -164,14 +165,14 @@ Aren't pandas amazing?!!
 
 ### Change your website background color
 
-Wouldn't it be nice to add a splash of color? I think so! Let's change the background color of our website! To do this, we will be using the `<style>` tags. `<style>` and `</style>` have code between them that determine what our website looks like! 
+Wouldn't it be nice to add a splash of color? I think so! Let's change the background color of our website! To do this, we will be using the `<style>` tags. `<style>` and `</style>` have code between them that determine what our website looks like!
 
 To start, we need to figure out what we want to change. Firstly, we are changing the background color of the website. In our, this can be referred to as `background-color`. [(For a full list of things we can change, look at W3School's easy-to-use reference document!)](https://www.w3schools.com/cssref/) Now, we need to figure out which thing we are changing the `background-color` of. For us, it's all of the content of the website. Since our `<body>` tags are responsible for all of the content of the website, we know that we need to change the `background-color` of the `<body>` tags. Hurrah! Now we are all set to put this into code.
 
 ```
 <style>
     body {
-     background-color: orange;   
+     background-color: orange;
     }
 </style>
 ```
@@ -191,7 +192,7 @@ Here's the full code for our website now:
     <title>My Amazing Website!</title>
     <style>
     body {
-     background-color: orange;   
+     background-color: orange;
     }
     </style>
 </head>
@@ -217,15 +218,15 @@ Now, go off and make this website your own! I can't see wait to see what you cre
 
 ### Doing something else with your website
 
-Inevitably, you will want to add something to your website like a YouTube video, or a button, or something else completely new! When in doubt, the most important skill you can have as a hacker is **effective Googling**. That's right. **Googling.** There will be times when you  need to learn how to do things from scratch, either by following tutorials, or other guides like this one. 
+Inevitably, you will want to add something to your website like a YouTube video, or a button, or something else completely new! When in doubt, the most important skill you can have as a hacker is **effective Googling**. That's right. **Googling.** There will be times when you need to learn how to do things from scratch, either by following tutorials, or other guides like this one.
 
 Listed here are some amazing resources when you are learning how to code:
 
-* [W3School's HTML Guide](https://www.w3schools.com/html/default.asp). This guide will teach you step-by-step how to be an HTML master! Complete with tutorials, example code and more, W3Schools will teach you how to make beautiful websites like the ones you use every day!
-* [Mozilla's Developer Docs](https://developer.mozilla.org/en-US/). Mozilla, the company behind the Firefox browser, has an amazing website that has examples for every single HTML tag, as well as a bunch of tutorials for building other things like video games and things in VR. I know I told you to **Google** things, but **Firefox**ing things works amazingly also!
-* [freeCodeCamp](https://www.freecodecamp.org/). Do you want a more structured approach to programming? Are you starting from zero experience, and want a Khan Academy-like approach to learning how to make websites? freeCodeCamp has step-by-step lessons and an online code editor that will bring you from 0 to 100 really quickly!
+- [W3School's HTML Guide](https://www.w3schools.com/html/default.asp). This guide will teach you step-by-step how to be an HTML master! Complete with tutorials, example code and more, W3Schools will teach you how to make beautiful websites like the ones you use every day!
+- [Mozilla's Developer Docs](https://developer.mozilla.org/en-US/). Mozilla, the company behind the Firefox browser, has an amazing website that has examples for every single HTML tag, as well as a bunch of tutorials for building other things like video games and things in VR. I know I told you to **Google** things, but **Firefox**ing things works amazingly also!
+- [freeCodeCamp](https://www.freecodecamp.org/). Do you want a more structured approach to programming? Are you starting from zero experience, and want a Khan Academy-like approach to learning how to make websites? freeCodeCamp has step-by-step lessons and an online code editor that will bring you from 0 to 100 really quickly!
 
-If you know of any more programming resources, let us know so we can add to this list! 
+If you know of any more programming resources, let us know so we can add to this list!
 
 Of course, humans are much more friendlier than websites. Your friends, and fellow hackers are great resources for learning how to code! You can always ask your peers, and us, for help! If you can, help a friend! Find someone to work through a problem with! Two minds are better than one!
 
