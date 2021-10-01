@@ -1,5 +1,5 @@
-# 2020-website
-This is an archive of what the P2P Hack Club website looked like during the 2020-21 schoolyear. For the 2021-22 schoolyear, we've started fresh with a new website located at [P2PHackClub/website](https://github.com/P2PHackClub/website)!
+# 2019-website
+This is an archive of what the P2P Hack Club website looked like during the 2019-20 schoolyear. We've started fresh with a new website located at [P2PHackClub/website](https://github.com/P2PHackClub/website)!
 
 If you want to view the old site, it is archived at https://2020.p2phack.club/
 
